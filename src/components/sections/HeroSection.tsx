@@ -13,7 +13,7 @@ const HeroSection = () => (
         />
         <div className="flex-1">
           <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground leading-tight">
-            [Your Name]
+            [Antonio Coppola]
           </h1>
           <p className="text-lg text-meta mt-2 font-sans">
             [Current Role / Position]
