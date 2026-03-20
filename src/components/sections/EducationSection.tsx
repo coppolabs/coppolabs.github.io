@@ -41,7 +41,7 @@ const education = [
 ];
 
 const EducationSection = () => (
-  <SectionWrapper id="education" surface>
+  <SectionWrapper id="education">
     <SectionTitle>Education</SectionTitle>
 
     <div className="mt-6 space-y-8">

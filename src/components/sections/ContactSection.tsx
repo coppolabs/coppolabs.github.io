@@ -10,7 +10,7 @@ const links = [
 ];
 
 const ContactSection = () => (
-  <SectionWrapper id="contact" surface>
+  <SectionWrapper id="contact">
     <SectionTitle>Contact</SectionTitle>
     <p className="text-foreground/70 font-sans mb-6">
       I welcome opportunities for collaboration, research discussions, and industry roles.

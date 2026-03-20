@@ -40,7 +40,7 @@ const skillGroups = [
 ];
 
 const SkillsSection = () => (
-  <SectionWrapper id="skills">
+  <SectionWrapper id="skills" surface>
     <SectionTitle>Skills</SectionTitle>
 
     <div className="mt-6 space-y-5">

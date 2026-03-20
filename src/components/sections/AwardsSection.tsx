@@ -24,20 +24,21 @@ const AwardsSection = () => (
   <SectionWrapper id="awards">
     <SectionTitle>Awarded Scholarships</SectionTitle>
 
-    <div className="space-y-6 mt-6">
+    <div className="space-y-4 mt-6">
       {scholarships.map((award, i) => (
-        <div key={i} className="flex items-start gap-4">
-          <Award size={18} className="text-primary mt-1 flex-shrink-0" />
+        <div key={i} className="flex items-start gap-3">
+          <Award size={16} className="text-primary mt-1 flex-shrink-0" />
 
           <div>
-            <p className="font-sans font-medium text-foreground text-base">
-              {award.name}
-              <span className="text-meta font-normal ml-2">
-                · {award.year}
-              </span>
+            <p className="text-xs font-sans uppercase tracking-wider text-foreground/50">
+              {award.year}
             </p>
 
-            <p className="text-sm text-foreground/70 font-sans mt-1 leading-relaxed">
+            <p className="font-sans font-medium text-foreground text-sm leading-snug">
+              {award.name}
+            </p>
+
+            <p className="text-sm text-foreground/70 font-sans">
               {award.description}
             </p>
           </div>

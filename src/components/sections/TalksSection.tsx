@@ -52,11 +52,16 @@ const TalksSection = () => (
           <div key={i} className="flex items-start gap-3">
             <Icon size={16} className="text-primary mt-1 flex-shrink-0" />
             <div>
-              <p className="font-sans font-medium text-foreground text-sm">
+              <p className="text-xs font-sans uppercase tracking-wider text-foreground/50">
+                {talk.year}
+              </p>
+
+              <p className="font-sans font-medium text-foreground text-sm leading-snug">
                 {talk.title}
               </p>
+
               <p className="text-sm text-meta font-sans">
-                {talk.event} · {talk.year}
+                {talk.event}
               </p>
             </div>
           </div>
