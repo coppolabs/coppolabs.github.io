@@ -1,0 +1,61 @@
+# This workflow automatically deploys the Vite website to GitHub Pages.
+# On every push to the `main` branch:
+# 1. It installs dependencies (npm ci)
+# 2. Builds the project (npm run build → outputs to /dist)
+# 3. Uploads the build artifacts
+# 4. Publishes the site to GitHub Pages
+#
+# Result: any change pushed to `main` is automatically built and deployed online.
+#
+# Note:
+# - The `dist/` folder is NOT committed; it is generated during CI.
+# - The site URL depends on the repo name:
+#   - username.github.io  → https://username.github.io/
+#   - other repo          → https://username.github.io/repo-name/
+
+name: Deploy Vite site to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        uses: actions/deploy-pages@v4
