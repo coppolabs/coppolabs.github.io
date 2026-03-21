@@ -19,24 +19,38 @@ const navItems = [
   { label: "Awards", href: "/#awards" },
   { label: "Skills", href: "/#skills" },
 ];
+
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
     <>
-      {/* Top bar */}
+      {/* Top bar (unchanged) */}
       <header className="fixed top-0 left-0 w-full z-50 bg-surface border-b border-border">
-        {/* max-w-5xl: The "sweet spot" between too wide and too squeezed */}
         <div className="max-w-5xl mx-auto flex items-center justify-between px-6 py-4">
 
-          {/* Left: Name */}
-          <div>
+          {/* Left: Name & Mobile Socials */}
+          <div className="flex items-center gap-4">
             <h2 className="text-xl font-serif font-bold tracking-tight text-foreground">
               Antonio Coppola
             </h2>
+
+            <div className="flex lg:hidden items-center gap-4 ml-2">
+              {links.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground/60 hover:text-primary transition-colors"
+                >
+                  {link.icon}
+                </a>
+              ))}
+            </div>
           </div>
 
-          {/* Desktop nav */}
+          {/* Desktop Nav (Hidden on Mobile) */}
           <nav className="hidden lg:flex items-center gap-6">
             {navItems.map((item) => (
               <a
@@ -49,7 +63,7 @@ const Navbar = () => {
             ))}
           </nav>
 
-          {/* Right: Socials */}
+          {/* Desktop Socials (Hidden on Mobile) */}
           <div className="hidden lg:flex items-center gap-3">
             {links.map((link) => (
               <div key={link.label} className="relative group flex justify-center">
@@ -61,57 +75,39 @@ const Navbar = () => {
                 >
                   {link.icon}
                 </a>
-
-                {/* Cute box: top-full mt-1 keeps it snug below */}
                 <div className="absolute top-full mt-1.5 px-2 py-1 bg-foreground text-background text-[10px] font-medium rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50 shadow-sm">
                   {link.label}
-                  {/* Arrow pointing up */}
                   <div className="absolute bottom-full left-1/2 -translate-x-1/2 border-4 border-transparent border-b-foreground"></div>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Mobile button */}
+          {/* Mobile menu button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden p-2 rounded-md"
+            className="lg:hidden p-2 rounded-md ml-auto"
           >
             {mobileOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </header>
 
-      {/* Mobile dropdown */}
+      {/* Mobile dropdown - Two Column Layout */}
       {mobileOpen && (
-        <div className="fixed top-[72px] left-0 w-full bg-surface border-b border-border z-40 px-6 py-4 flex flex-col gap-4 lg:hidden">
-          <nav className="flex flex-col gap-2">
+        <div className="fixed top-[60px] left-0 w-full bg-surface border-b border-border z-40 px-6 py-3 flex flex-col lg:hidden shadow-lg">
+          <nav className="grid grid-cols-2 gap-x-4 gap-y-1">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileOpen(false)}
-                className="text-sm text-foreground/80 hover:text-primary"
+                className="text-sm text-foreground/80 hover:text-primary py-2 transition-colors border-b border-border/50 last:border-0"
               >
                 {item.label}
               </a>
             ))}
           </nav>
-
-          <div className="flex gap-4 pt-4 border-t border-border">
-            {links.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground/60 hover:text-primary flex items-center gap-2"
-              >
-                {link.icon}
-                <span className="text-xs">{link.label}</span>
-              </a>
-            ))}
-          </div>
         </div>
       )}
     </>

@@ -23,12 +23,12 @@ const AboutSection = () => (
       </div>
 
       <div className="space-y-4 text-foreground/80 font-sans leading-[1.65] text-justify">
-        <p>
+        {/* <p>
           I am a Ph.D. candidate in Operations Research at the Technical University of Munich, working at the intersection of machine learning and combinatorial optimization. My research focuses on large-scale dynamic routing problems, with a particular emphasis on mobility-on-demand systems and congestion-aware decision-making.
-        </p>
+        </p> */}
 
         <p>
-          I began my academic journey in Naples, where I studied industrial engineering and worked as a research assistant on the control of complex networks under the supervision of{" "}
+          I began my academic journey in Naples, Italy, where I studied industrial engineering and worked as a research assistant on the control of complex networks under the supervision of{" "}
           <a
             href="https://scholar.google.de/citations?hl=it&user=xO0lRJIAAAAJ"
             target="_blank"
@@ -36,7 +36,7 @@ const AboutSection = () => (
             className="underline underline-offset-2"
           >
             Prof. Franco Garofalo
-          </a>. I then moved to Germany to pursue a Ph.D. at TUM under{" "}
+          </a>. I then moved to Germany to pursue a Ph.D. at the Technical University of Munich under{" "}
           <a
             href="https://scholar.google.de/citations?user=umGuS18AAAAJ&hl=it&oi=ao"
             target="_blank"
@@ -56,17 +56,12 @@ const AboutSection = () => (
             className="underline underline-offset-2"
           >
             Prof. Michel Gendreau
-          </a>{" "}
-          on transportation optimization, further broadening my perspective on large-scale mobility systems. In parallel, I have been engaged in teaching and thesis supervision, as well as collaborating with industry partners on real-world mobility applications.
-        </p>
-
-        <p>
-          More broadly, I am interested in designing intelligent decision systems that improve the efficiency and sustainability of complex infrastructures and generate tangible societal impact. I enjoy developing end-to-end frameworks, from modeling and algorithm design to experimentation and evaluation, that enable coordinated, scalable, and practically deployable solutions in complex transportation systems.
+          </a>, further broadening my perspective on transportation optimization. In parallel, I have been engaged in teaching and thesis supervision, as well as collaborating with industry partners on real-world mobility applications.
         </p>
       </div>
     </div>
 
-    <div className="mt-8">
+    {/* <div className="mt-8">
       <h3 className="text-sm font-sans font-semibold text-foreground/60 uppercase tracking-wider mb-3">
         Research Interests
       </h3>
@@ -80,7 +75,7 @@ const AboutSection = () => (
           </span>
         ))}
       </div>
-    </div>
+    </div> */}
 
     <div className="mt-8 p-4 rounded-lg bg-background border border-border">
       <p className="text-xs font-sans uppercase tracking-wider text-foreground/50 mb-1">

@@ -11,7 +11,7 @@ const experiences = [
           href="https://scholar.google.de/citations?user=umGuS18AAAAJ&hl=it&oi=ao"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline underline-offset-2"
+          className="underline underline-offset-2 hover:text-primary transition-colors"
         >
           Prof. Maximilian Schiffer
         </a>
@@ -35,7 +35,7 @@ const experiences = [
           href="https://scholar.google.de/citations?hl=it&user=CilK624AAAAJ"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline underline-offset-2"
+          className="underline underline-offset-2 hover:text-primary transition-colors"
         >
           Prof. Michel Gendreau
         </a>
@@ -49,13 +49,25 @@ const experiences = [
     ]
   },
   {
-    position: "Research Engineer – STEAM Project (Semi-Flexible Transit)",
-    org: "Technical University of Munich",
+    position: "Research Engineer – STEAM Project",
+    org: (
+      <>
+        Technical University of Munich, as part of the{" "}
+        <a
+          href="https://mcube-cluster.de/en/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-2 hover:text-primary transition-colors"
+        >
+          MCube Cluster
+        </a>
+      </>
+    ),
     dates: "2023 – 2024",
     bullets: [
-      "Implemented and evaluated algorithms for real-time semi-flexible bus routing using real-world mobility data.",
-      "Designed and conducted large-scale experiments to assess system performance under dynamic demand.",
-      "Participated in field trials, collecting and processing GPS data to evaluate operational outcomes."
+      "Developed and evaluated real-time routing algorithms for semi-flexible transit systems using empirical mobility data.",
+      "Conducted large-scale computational experiments to benchmark system performance and reliability under dynamic demand patterns.",
+      "Coordinated field trials and processed GPS telemetry to validate operational efficiency and model accuracy."
     ]
   },
   {
@@ -67,13 +79,13 @@ const experiences = [
           href="https://scholar.google.de/citations?hl=it&user=xO0lRJIAAAAJ"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline underline-offset-2"
+          className="underline underline-offset-2 hover:text-primary transition-colors"
         >
           Prof. Franco Garofalo
         </a>
       </>
     ),
-    dates: "2020 – 2021",
+    dates: "2021",
     bullets: [
       "Collaborated on research in network dynamical systems following Master’s thesis work.",
       "Contributed to a publication in IEEE Control Systems Letters."
