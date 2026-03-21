@@ -6,7 +6,7 @@ import cvFile from "@/assets/AC_CV.pdf";
 const HeroSection = () => (
   <section
     id="hero"
-    className="scroll-mt-28 -mt-20 -mb-5 min-h-screen flex items-center py-20"
+    className="scroll-mt-28 -mt-20 -mb-5 min-h-screen flex items-center py-20 pt-10"
   >
     <div className="max-w-5xl mx-auto w-full px-6 md:px-12">
       <div className="flex flex-col md:flex-row items-start gap-10">
@@ -30,14 +30,11 @@ const HeroSection = () => (
           </p>
 
           <p className="text-foreground/80 font-sans mt-4 leading-[1.65] max-w-2xl text-justify">
-            I am a researcher in operations research and machine learning, currently completing my Ph.D. at the
-            Technical University of Munich. My work lies at the intersection of combinatorial optimization, data-driven
-            decision-making, and dynamic routing, with a particular focus on autonomous mobility.
-            I develop scalable methods that anticipate congestion, coordinate decisions over space and time, and bring
-            together algorithmic rigor and practical relevance for complex transportation systems.
-            <br />
-            I welcome opportunities for collaboration, research discussions, and industry roles.
-            Feel free to reach out regarding projects, positions, or just for a chat.
+            I design scalable decision-making methods at the intersection of combinatorial optimization and machine learning, with a focus on dynamic routing and congestion-aware systems.
+
+            My work integrates mathematical programming, metaheuristics, and learning-based approaches to enable coordinated, forward-looking control in autonomous mobility-on-demand systems.
+
+            I am open to research collaborations and industry opportunities in optimization, mobility, and data-driven decision systems.
           </p>
 
           <div className="flex flex-wrap gap-3 mt-4">

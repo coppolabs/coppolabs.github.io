@@ -40,36 +40,31 @@ const skillGroups = [
 ];
 
 const SkillsSection = () => (
-  <SectionWrapper id="skills" variant="band" className="pb-20">
-    <div className="-mt-8">
-      <SectionTitle>Skills</SectionTitle>
-    </div>
+  <SectionWrapper id="skills" variant="band" className="py-16 md:py-0">
+    <SectionTitle>Skills</SectionTitle>
 
-    {/* NEW: pull content up */}
-    <div className="-mt-6">
-      <div className="mt-12 mb-6 space-y-5">
-        {skillGroups.map((group) => (
-          <div
-            key={group.category}
-            className="grid grid-cols-[180px_1fr] gap-x-6 items-start"
-          >
-            <h4 className="text-sm font-sans font-semibold text-foreground pt-1">
-              {group.category}
-            </h4>
+    <div className="mt-8 space-y-8">
+      {skillGroups.map((group) => (
+        <div
+          key={group.category}
+          className="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-y-3 md:gap-x-8 items-start"
+        >
+          <h4 className="text-xs font-sans font-semibold uppercase tracking-[0.14em] text-foreground/55 pt-1">
+            {group.category}
+          </h4>
 
-            <div className="flex flex-wrap gap-2">
-              {group.skills.map((skill) => (
-                <span
-                  key={skill}
-                  className="px-2.5 py-1 text-[13px] font-sans rounded-md border border-border bg-surface text-foreground"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
+          <div className="flex flex-wrap gap-2.5">
+            {group.skills.map((skill) => (
+              <span
+                key={skill}
+                className="rounded-full border border-border/80 bg-background/70 px-3 py-1.5 text-[13px] font-sans text-foreground/85 transition-colors hover:border-primary/30 hover:text-foreground"
+              >
+                {skill}
+              </span>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   </SectionWrapper>
 );

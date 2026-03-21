@@ -30,13 +30,11 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
 
           {/* Left: Name */}
+          {/* Left: Name */}
           <div>
-            <h2 className="text-lg font-serif font-bold text-foreground">
+            <h2 className="text-xl font-serif font-bold tracking-tight text-foreground">
               Antonio Coppola
             </h2>
-            <p className="text-xs text-meta">
-              Researcher in OR & ML
-            </p>
           </div>
 
           {/* Desktop nav */}
