@@ -6,19 +6,21 @@ import cvFile from "@/assets/AC_CV.pdf";
 const HeroSection = () => (
   <section
     id="hero"
-    className="scroll-mt-28 -mt-20 min-h-[80vh] flex items-center py-20"
+    /* Adjusted: pb-10 (mobile) vs pb-20 (desktop) to tighten the gap */
+    className="scroll-mt-28 -mt-20 min-h-[80vh] flex items-center pt-20 pb-10 md:pb-20"
   >
-    {/* Reduced max-width to 4xl to keep everything in a tighter column */}
     <div className="max-w-4xl mx-auto w-full px-6 md:px-12">
       <div className="flex flex-col md:flex-row items-center gap-10 lg:gap-14">
 
-        {/* Profile Image - Balanced Size */}
+        {/* Profile Image - Slightly bigger size and tighter zoom */}
         <div className="flex-shrink-0">
-          <img
-            src={profileImg}
-            alt="Antonio Coppola"
-            className="w-56 h-56 md:w-64 md:h-64 rounded-full object-cover border-4 border-primary/10 shadow-xl"
-          />
+          <div className="w-60 h-60 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-primary/10 shadow-xl">
+            <img
+              src={profileImg}
+              alt="Antonio Coppola"
+              className="w-full h-full object-cover scale-110"
+            />
+          </div>
         </div>
 
         {/* Text Content */}
@@ -31,7 +33,7 @@ const HeroSection = () => (
             Operations Research & Machine Learning
           </p>
 
-          <div className="text-foreground/80 font-sans mt-6 leading-relaxed text-justify [hyphens:auto] [text-justify:inter-word]">
+          <div className="text-foreground/80 font-sans mt-6 leading-relaxed text-justify [hyphens:auto] [text-justify:inter-word] break-words">
             <p>
               I design scalable decision-making methods at the intersection of
               combinatorial optimization and machine learning, with a focus
