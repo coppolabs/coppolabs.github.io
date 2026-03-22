@@ -12,15 +12,13 @@ const HeroSection = () => (
     <div className="max-w-4xl mx-auto w-full px-6 md:px-12">
       <div className="flex flex-col md:flex-row items-center gap-10 lg:gap-14">
 
-        {/* Profile Image - Slightly bigger size and tighter zoom */}
+        {/* Profile Image - Balanced Size */}
         <div className="flex-shrink-0">
-          <div className="w-60 h-60 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-primary/10 shadow-xl">
-            <img
-              src={profileImg}
-              alt="Antonio Coppola"
-              className="w-full h-full object-cover scale-110" // scale-110 increases the zoom
-            />
-          </div>
+          <img
+            src={profileImg}
+            alt="Antonio Coppola"
+            className="w-56 h-56 md:w-64 md:h-64 rounded-full object-cover border-4 border-primary/10 shadow-xl"
+          />
         </div>
 
         {/* Text Content */}

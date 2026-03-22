@@ -59,20 +59,25 @@ const workingPapers: Publication[] = [
   },
 ];
 
+
 const PublicationItem = ({ pub }: { pub: Publication }) => {
   const [expanded, setExpanded] = useState(false);
 
   return (
     <div className="py-6 border-b border-border last:border-b-0">
-      <h4 className="font-sans font-semibold text-foreground text-base leading-snug">
+      <h4 className="font-sans font-semibold text-foreground text-base leading-snug break-words">
         {pub.title}
       </h4>
-      <p className="text-sm text-meta font-sans mt-1">{pub.authors}</p>
+      {/* Added break-words and hyphens for author list */}
+      <p className="text-sm text-meta font-sans mt-1 break-words [hyphens:auto]">
+        {pub.authors}
+      </p>
       <p className="text-sm text-meta font-sans italic mt-0.5">{pub.venue}</p>
 
       <div className="mt-3">
+        {/* Added break-words and hyphens for Abstract */}
         <p
-          className={`text-sm text-foreground/70 font-sans  text-justify leading-relaxed transition-all ${expanded ? "" : "line-clamp-3"
+          className={`text-sm text-foreground/70 font-sans text-justify leading-relaxed break-words [hyphens:auto] transition-all ${expanded ? "" : "line-clamp-3"
             }`}
         >
           {pub.abstract}
@@ -81,7 +86,7 @@ const PublicationItem = ({ pub }: { pub: Publication }) => {
         <button
           type="button"
           onClick={() => setExpanded((prev) => !prev)}
-          className="mt-2 inline-flex items-center gap-1.5 text-sm font-sans  text-justify font-medium text-primary hover:text-primary/80 transition-colors"
+          className="mt-2 inline-flex items-center gap-1.5 text-sm font-sans font-medium text-primary hover:text-primary/80 transition-colors"
         >
           {expanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
           {expanded ? "Show less" : "Read abstract"}
@@ -106,7 +111,7 @@ const PublicationItem = ({ pub }: { pub: Publication }) => {
             href={pub.codeHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-sm font-sans font-medium text-primary hover:text-primary/80 transition-colors text-justified"
+            className="inline-flex items-center gap-1.5 text-sm font-sans font-medium text-primary hover:text-primary/80 transition-colors"
           >
             <Code size={14} />
             Code
@@ -118,7 +123,7 @@ const PublicationItem = ({ pub }: { pub: Publication }) => {
             href={pub.pageHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-sm font-sans font-medium text-primary hover:text-primary/80 transition-colors text-justified"
+            className="inline-flex items-center gap-1.5 text-sm font-sans font-medium text-primary hover:text-primary/80 transition-colors"
           >
             <ExternalLink size={14} />
             Paper page
@@ -133,7 +138,7 @@ const ResearchSection = () => (
   <SectionWrapper id="research">
     <SectionTitle>Research & Publications</SectionTitle>
 
-    <h3 className="text-sm font-sans font-semibold text-meta uppercase tracking-wider mb-2 text-justified">
+    <h3 className="text-sm font-sans font-semibold text-meta uppercase tracking-wider mb-2">
       Publications
     </h3>
     <div className="mb-10">
@@ -142,7 +147,7 @@ const ResearchSection = () => (
       ))}
     </div>
 
-    <h3 className="text-sm font-sans font-semibold text-meta uppercase tracking-wider mb-2 text-justified">
+    <h3 className="text-sm font-sans font-semibold text-meta uppercase tracking-wider mb-2">
       Working Papers & Preprints
     </h3>
     <div>

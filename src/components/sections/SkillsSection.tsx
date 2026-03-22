@@ -40,10 +40,9 @@ const skillGroups = [
 ];
 
 const SkillsSection = () => (
-  <SectionWrapper id="skills" variant="band" className="py-16 md:py-0">
-    <SectionTitle>Skills</SectionTitle>
-
-    <div className="mt-8 space-y-8">
+  <SectionWrapper id="skills" variant="band" className="py-16 md:py-14">
+    <div className="-mt-14 space-y-4">
+      <SectionTitle>Skills</SectionTitle>
       {skillGroups.map((group) => (
         <div
           key={group.category}
