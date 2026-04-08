@@ -6,23 +6,23 @@ import { GraduationCap } from "lucide-react";
 
 const education = [
   {
-    degree: "Ph.D. Candidate, Business Analytics & Intelligent Systems",
+    degree: "Ph.D. in Operations Research (Candidate)",
     institution: "**Technical University of Munich**, Germany",
     dates: "2022 – 2026",
-    details: "Thesis: “Balanced and Staggered Routing in AMoD Systems”",
+    details: "Thesis: “Balanced and Staggered Routing in Autonomous Mobility-on-Demand Systems”",
   },
   {
     degree: "B.Sc. & M.Sc. in Industrial Engineering",
     institution: "**University of Naples Federico II**, Italy",
     dates: "2014 – 2021",
-    details: "110/110 cum laude • Special mention for academic excellence",
+    details: "Graduated with highest distinction (110/110 cum laude) and special mention",
   },
   {
     degree: "EsaBac – Italian–French Dual Diploma",
     institution: "**Liceo Classico Europeo**, Naples, Italy",
     dates: "2009 – 2014",
-    details: "Bilingual program awarding both Italian and French diplomas.",
-  },
+    details: "Bilingual curriculum awarding both Italian and French diplomas",
+  }
 ];
 
 const EducationSection = () => (
