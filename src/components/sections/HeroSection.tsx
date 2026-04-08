@@ -1,4 +1,4 @@
-import { FileDown, Mail } from "lucide-react";
+import { FileText, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import profileImg from "@/assets/profile.png";
 import cvFile from "@/assets/AC_CV.pdf";
@@ -47,13 +47,13 @@ const HeroSection = () => (
           </div>
 
           <div className="flex flex-wrap gap-3 mt-8 justify-center md:justify-start md:-ml-9">
-            <a href={cvFile} download>
+            <a href={cvFile} target="_blank" rel="noopener noreferrer">
               <Button
                 variant="outline"
                 className="h-9 px-4 border-primary text-primary hover:bg-primary/5 transition-colors"
               >
-                <FileDown size={16} className="mr-2" />
-                Download CV
+                <FileText size={16} className="mr-2" />
+                Open CV
               </Button>
             </a>
 
@@ -67,6 +67,7 @@ const HeroSection = () => (
               </Button>
             </a>
           </div>
+
           {/* Mobile Image */}
           <div className="mt-6 mb-4 md:hidden flex justify-center">
             <div className="w-13">
