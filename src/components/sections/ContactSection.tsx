@@ -3,7 +3,7 @@ import SectionTitle from "@/components/SectionTitle";
 import { Mail, Linkedin, GraduationCap, Github } from "lucide-react";
 
 const links = [
-  { label: "Email", href: "mailto:antonio.coppola@tum.de", icon: <Mail size={18} /> },
+  { label: "Email", href: "mailto:antonio.coppola364@gmail.com", icon: <Mail size={18} /> },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/antoniocoppola364/", icon: <Linkedin size={18} /> },
   { label: "Google Scholar", href: "https://scholar.google.de/citations?user=43663d0AAAAJ&hl=it", icon: <GraduationCap size={18} /> },
   { label: "GitHub", href: "https://github.com/coppolabs", icon: <Github size={18} /> },

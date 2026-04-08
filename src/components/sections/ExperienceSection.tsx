@@ -7,52 +7,78 @@ const experiences = [
     org: (
       <>
         Technical University of Munich • Supervised by{" "}
-        <a href="..." className="underline underline-offset-2 hover:text-primary transition-colors">
+        <a
+          href="..."
+          className="underline underline-offset-2 hover:text-primary transition-colors"
+        >
           Prof. Maximilian Schiffer
         </a>
       </>
     ),
     dates: "2022 – Present",
-    summary: "Developing optimization and learning-augmented methods for congestion-aware autonomous mobility systems, integrating mathematical programming with large-scale experimental pipelines in Julia, Python, and C++."
+    summary:
+      "Develop optimization and learning-augmented methods for congestion-aware routing in autonomous mobility systems, combining mathematical programming, metaheuristics, and large-scale experimental pipelines. Conduct data-driven studies on real mobility networks, publish in leading Operations Research outlets, and contribute to teaching and thesis supervision."
   },
   {
     position: "Visiting Researcher",
     org: (
       <>
         Polytechnique Montréal • Hosted by{" "}
-        <a href="..." className="underline underline-offset-2 hover:text-primary transition-colors">
+        <a
+          href="..."
+          className="underline underline-offset-2 hover:text-primary transition-colors"
+        >
           Prof. Michel Gendreau
         </a>
       </>
     ),
     dates: "2025",
-    summary: "Collaborating with leading Operations Research groups on large-scale transportation optimization and international research initiatives."
+    summary:
+      "Collaborated on large-scale transportation optimization problems and metaheuristic design within a leading international Operations Research environment, contributing to research on urban mobility systems."
   },
   {
-    position: "Research Engineer – STEAM Project",
+    position: "Research Engineer",
     org: (
       <>
-        TUM • Part of the{" "}
-        <a href="..." className="underline underline-offset-2 hover:text-primary transition-colors">
+        <a
+          href="https://mcube-cluster.de/en/projekt/steam/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-2 hover:text-primary transition-colors"
+        >
+          STEAM Project
+        </a>{" "}
+        • Part of the{" "}
+        <a
+          href="https://mcube-cluster.de/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-2 hover:text-primary transition-colors"
+        >
           MCube Cluster
         </a>
       </>
     ),
     dates: "2024",
-    summary: "Designed real-time routing algorithms for semi-flexible transit systems using empirical GPS telemetry and large-scale computational benchmarks."
+    summary:
+      "Designed and evaluated routing algorithms for semi-flexible transit systems using real-world GPS telemetry and large-scale computational experiments. Contributed to the validation of real-time decision models through field tests and collaborations with industry partners."
   },
   {
     position: "Research Assistant",
     org: (
       <>
         University of Naples Federico II • Supervised by{" "}
-        <a href="..." className="underline underline-offset-2 hover:text-primary transition-colors">
+        <a
+          href="..."
+          className="underline underline-offset-2 hover:text-primary transition-colors"
+        >
           Prof. Franco Garofalo
         </a>
       </>
     ),
     dates: "2021",
-    summary: "Researched network dynamical systems, resulting in a co-authored publication in IEEE Control Systems Letters."
+    summary:
+      "Conducted research on the controllability of complex network dynamical systems, leading to a co-authored publication in IEEE Control Systems Letters."
   }
 ];
 
@@ -62,7 +88,6 @@ const ExperienceSection = () => (
     <div className="space-y-10">
       {experiences.map((exp, i) => (
         <div key={i} className="relative pl-8 border-l border-border/60">
-          {/* Minimalist Timeline Indicator */}
           <div className="absolute -left-[4.5px] top-1.5 w-2 h-2 rounded-full bg-primary shadow-sm" />
 
           <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 mb-2">
@@ -86,7 +111,5 @@ const ExperienceSection = () => (
     </div>
   </SectionWrapper>
 );
-
-
 
 export default ExperienceSection;

@@ -26,7 +26,7 @@ const Privacy = () => {
                             <br />
                             Germany
                             <br />
-                            E-Mail: <a href="mailto:antonio.coppola@tum.de" className="underline">antonio.coppola@tum.de</a>
+                            E-Mail: <a href="mailto:antonio.coppola364@gmail.com" className="underline">antonio.coppola364@gmail.com</a>
                         </p>
                     </section>
 

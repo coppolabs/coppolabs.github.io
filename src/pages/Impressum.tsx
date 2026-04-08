@@ -32,7 +32,7 @@ const Impressum = () => {
                     <section>
                         <h2 className="text-xl font-semibold mb-2">Kontakt</h2>
                         <p>
-                            E-Mail: <a href="mailto:antonio.coppola@tum.de" className="underline">antonio.coppola@tum.de</a>
+                            E-Mail: <a href="mailto:antonio.coppola364@gmail.com" className="underline">antonio.coppola364@gmail.com</a>
                             <br />
                             Telefon: +393396348089
                         </p>
