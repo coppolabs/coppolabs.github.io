@@ -6,55 +6,100 @@
 
 @layer base {
   :root {
-    /* Pure soft white background inspired by the crisp shirt */
+    /* Pure white background matching the crisp shirt */
     --background: 0 0% 100%;
-    /* Deep dark navy/charcoal derived from the suit jacket */
-    --foreground: 218 35% 15%;
+    /* Deep charcoal text derived from suit shadow tones */
+    --foreground: 216 24% 18%;
 
-    /* Soft cool gray background for cards, pulled from the studio backdrop */
-    --card: 216 12% 95%;
-    --card-foreground: 218 35% 15%;
+    /* Neutral backdrop gray for cards and surfaces */
+    --card: 216 10% 96%;
+    --card-foreground: 216 24% 18%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 218 35% 15%;
+    --popover-foreground: 216 24% 18%;
 
-    /* Deep classic navy blue ( suit jacket primary color ) */
-    --primary: 218 42% 18%;
+    /* Deep tailored navy suit primary */
+    --primary: 216 40% 16%;
     --primary-foreground: 0 0% 100%;
 
-    /* Subtle neutral slate container background */
+    /* Muted slate container surface */
     --secondary: 216 10% 92%;
-    --secondary-foreground: 218 35% 15%;
+    --secondary-foreground: 216 24% 18%;
 
-    /* Medium studio gray tone */
     --muted: 216 8% 52%;
     --muted-foreground: 216 8% 46%;
 
-    /* Warm amber/bronze accent tone sampled from warm skin highlights */
-    --accent: 28 55% 52%;
+    /* Minimalist Slate Accent (cool gray-blue tone, zero gold) */
+    --accent: 216 16% 42%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    /* Soft subtle border lines matching background gray shifts */
-    --border: 216 12% 88%;
-    --input: 216 12% 88%;
-    --ring: 218 42% 18%;
+    --border: 216 10% 90%;
+    --input: 216 10% 90%;
+    --ring: 216 40% 16%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 216 12% 96%;
-    --sidebar-foreground: 218 35% 15%;
-    --sidebar-primary: 218 42% 18%;
+    --sidebar-background: 216 10% 97%;
+    --sidebar-foreground: 216 24% 18%;
+    --sidebar-primary: 216 40% 16%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 28 55% 94%;
-    --sidebar-accent-foreground: 218 35% 15%;
-    --sidebar-border: 216 12% 88%;
-    --sidebar-ring: 218 42% 18%;
+    --sidebar-accent: 216 10% 92%;
+    --sidebar-accent-foreground: 216 24% 18%;
+    --sidebar-border: 216 10% 90%;
+    --sidebar-ring: 216 40% 16%;
 
-    --surface: 216 12% 96%;
+    --surface: 216 10% 97%;
     --meta: 216 8% 46%;
+  }
+
+  .dark {
+    /* Soft charcoal-navy background (low strain, non-pitch black) */
+    --background: 216 20% 13%;
+    /* Muted off-white text to prevent harsh glare */
+    --foreground: 216 12% 86%;
+
+    /* Slightly lighter card surface for comfortable depth */
+    --card: 216 18% 17%;
+    --card-foreground: 216 12% 86%;
+
+    --popover: 216 18% 17%;
+    --popover-foreground: 216 12% 86%;
+
+    /* Soft cool slate for primary interactive elements */
+    --primary: 216 15% 82%;
+    --primary-foreground: 216 25% 12%;
+
+    --secondary: 216 16% 21%;
+    --secondary-foreground: 216 12% 86%;
+
+    --muted: 216 10% 25%;
+    --muted-foreground: 216 10% 60%;
+
+    /* Subtle cool slate accent */
+    --accent: 216 14% 28%;
+    --accent-foreground: 216 12% 88%;
+
+    --destructive: 0 50% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 216 14% 21%;
+    --input: 216 14% 21%;
+    --ring: 216 15% 82%;
+
+    --sidebar-background: 216 18% 15%;
+    --sidebar-foreground: 216 12% 86%;
+    --sidebar-primary: 216 15% 82%;
+    --sidebar-primary-foreground: 216 25% 12%;
+    --sidebar-accent: 216 16% 21%;
+    --sidebar-accent-foreground: 216 12% 86%;
+    --sidebar-border: 216 14% 21%;
+    --sidebar-ring: 216 15% 82%;
+
+    --surface: 216 18% 17%;
+    --meta: 216 10% 60%;
   }
 }
 
@@ -64,7 +109,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground font-sans antialiased transition-colors duration-200;
   }
 
   h1,

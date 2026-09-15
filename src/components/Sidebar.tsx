@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Menu, X, Mail, Linkedin, Github, GraduationCap } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Menu, X, Mail, Linkedin, Github, GraduationCap, Sun, Moon } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const links = [
@@ -22,10 +22,36 @@ const navItems = [
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+      setIsDark(true);
+      document.documentElement.classList.add("dark");
+    } else {
+      setIsDark(false);
+      document.documentElement.classList.remove("dark");
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    if (isDark) {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+      setIsDark(false);
+    } else {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+      setIsDark(true);
+    }
+  };
 
   return (
     <>
-      {/* Top bar (unchanged) */}
+      {/* Top bar */}
       <header className="fixed top-0 left-0 w-full z-50 bg-surface border-b border-border">
         <div className="max-w-5xl mx-auto flex items-center justify-between px-6 py-4">
 
@@ -63,7 +89,7 @@ const Navbar = () => {
             ))}
           </nav>
 
-          {/* Desktop Socials (Hidden on Mobile) */}
+          {/* Desktop Socials & Theme Toggle (Hidden on Mobile) */}
           <div className="hidden lg:flex items-center gap-3">
             {links.map((link) => (
               <div key={link.label} className="relative group flex justify-center">
@@ -81,15 +107,33 @@ const Navbar = () => {
                 </div>
               </div>
             ))}
+
+            <button
+              onClick={toggleTheme}
+              aria-label="Toggle theme"
+              className="ml-2 p-1.5 rounded text-foreground/60 hover:text-primary hover:bg-primary/5 transition-colors flex items-center justify-center"
+            >
+              {isDark ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
           </div>
 
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden p-2 rounded-md ml-auto"
-          >
-            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
+          {/* Mobile Actions: Theme Toggle + Menu button */}
+          <div className="flex lg:hidden items-center gap-2 ml-auto">
+            <button
+              onClick={toggleTheme}
+              aria-label="Toggle theme"
+              className="p-2 rounded-md text-foreground/60 hover:text-primary transition-colors"
+            >
+              {isDark ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
+
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="p-2 rounded-md text-foreground"
+            >
+              {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
         </div>
       </header>
 
