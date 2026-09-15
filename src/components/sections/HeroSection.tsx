@@ -49,7 +49,7 @@ const HeroSection = () => {
               <p>{t("hero.paragraph1")}</p>
               <p className="mt-2">{t("hero.paragraph2")}</p>
               <p className="mt-2">{t("hero.paragraph3")}</p>
-              <p className="mt-2 -mb-2 text-sm font-medium border-l-2 border-primary/30 pl-4 italic text-left">
+              <p className="mt-2 -mb-2 text-sm font-medium border-l-2 border-primary/30 pl-4 italic text-left text-justify hyphens-auto break-words">
                 {t("hero.callout")}
               </p>
             </div>
