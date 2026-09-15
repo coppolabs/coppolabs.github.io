@@ -11,28 +11,29 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="scroll-mt-28 -mt-20 min-h-[70vh] flex items-center pt-20 pb-8 md:pb-20"
+      className="scroll-mt-28 -mt-20 min-h-[70vh] flex items-center pt-20 pb-8 sm:pb-20"
     >
-      <div className="max-w-4xl mx-auto w-full px-6 md:px-12">
+      <div className="max-w-4xl mx-auto w-full px-6 sm:px-8 md:px-12">
         {/* Header */}
-        <div className="mb-3 text-center md:text-left">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground leading-tight">
+        <div className="mb-4 text-center sm:text-left">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-foreground leading-tight">
             {t("hero.name")}
           </h1>
-          <div className="text-base md:text-lg text-primary mt-3 font-sans 
-          font-medium uppercase tracking-[0.08em] md:tracking-wide flex flex-col
-           md:flex-row md:items-center justify-center md:justify-start gap-1 md:gap-3">
-            <span>{t("hero.title1")}</span>
-            <span className="hidden md:inline text-primary/40">•</span>
-            <span>{t("hero.title2")}</span>
-            <span className="hidden md:inline text-primary/40">•</span>
-            <span>{t("hero.title3")}</span>
+
+          {/* Subtitles: Made slightly smaller on mid-screens (xs -> sm -> base) to keep everything single-line */}
+          <div className="text-xs sm:text-sm md:text-base text-primary mt-3 font-sans font-medium uppercase tracking-wider flex flex-col sm:flex-row sm:items-center justify-center sm:justify-start gap-1 sm:gap-2">
+            <span className="whitespace-nowrap">{t("hero.title1")}</span>
+            <span className="hidden sm:inline text-primary/40">•</span>
+            <span className="whitespace-nowrap">{t("hero.title2")}</span>
+            <span className="hidden sm:inline text-primary/40">•</span>
+            <span className="whitespace-nowrap">{t("hero.title3")}</span>
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-stretch gap-4 lg:gap-6">
-          {/* Profile image (desktop) */}
-          <div className="hidden md:block flex-shrink-0 w-52 md:w-64 mx-auto md:mx-0">
+        {/* Side-by-side layout starting at sm breakpoint */}
+        <div className="flex flex-col sm:flex-row items-stretch gap-5 lg:gap-6">
+          {/* Profile image (Desktop / Tablet) */}
+          <div className="hidden sm:block flex-shrink-0 w-44 sm:w-48 md:w-60 lg:w-64 mx-auto sm:mx-0">
             <img
               src={profileImg}
               alt="Antonio Coppola"
@@ -41,21 +42,21 @@ const HeroSection = () => {
           </div>
 
           {/* Content */}
-          <div className="flex-1 flex flex-col justify-between text-center md:text-left hyphens-auto break-words text-justify">
+          <div className="flex-1 flex flex-col justify-between text-center sm:text-left">
             <div
               lang={i18n.language}
-              className="max-w-[530px] text-foreground/80 font-sans leading-relaxed text-left md:text-justify hyphens-auto break-words"
+              className="max-w-[530px] text-foreground/80 font-sans leading-relaxed text-left hyphens-auto break-words space-y-2"
             >
               <p>{t("hero.paragraph1")}</p>
-              <p className="mt-2">{t("hero.paragraph2")}</p>
-              <p className="mt-2">{t("hero.paragraph3")}</p>
-              <p className="mt-2 -mb-2 text-sm font-medium border-l-2 border-primary/30 pl-4 italic text-left text-justify hyphens-auto break-words">
+              <p>{t("hero.paragraph2")}</p>
+              <p>{t("hero.paragraph3")}</p>
+              <p className="mt-2 text-sm font-medium border-l-2 border-primary/30 pl-4 italic text-left">
                 {t("hero.callout")}
               </p>
             </div>
 
             {/* Buttons */}
-            <div className="flex flex-wrap gap-3 mt-5 justify-center md:justify-start">
+            <div className="flex flex-wrap gap-3 mt-5 justify-center sm:justify-start">
               <a
                 href={activeCv}
                 target="_blank"
@@ -81,9 +82,9 @@ const HeroSection = () => {
               </a>
             </div>
 
-            {/* Mobile Image */}
-            <div className="mt-8 mb-4 md:hidden flex justify-center w-full">
-              <div className="w-full max-w-[340px]">
+            {/* Mobile Image (< 640px) */}
+            <div className="mt-6 mb-2 sm:hidden flex justify-center w-full">
+              <div className="w-full max-w-[280px]">
                 <img
                   src={profileImg}
                   alt="Antonio Coppola"

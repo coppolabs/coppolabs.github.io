@@ -6,7 +6,7 @@ import { Menu, X, Mail, Linkedin, Github, GraduationCap, Sun, Moon } from "lucid
 const links = [
   { label: "Email", href: "mailto:antonio.coppola364@gmail.com", icon: <Mail size={18} /> },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/antoniocoppola364/", icon: <Linkedin size={18} /> },
-  { label: "Google Scholar", href: "https://scholar.google.de/citations?user=43663d0AAAAJ&hl=it", icon: <GraduationCap size={18} /> },
+  { label: "Scholar", href: "https://scholar.google.de/citations?user=43663d0AAAAJ&hl=it", icon: <GraduationCap size={18} /> },
   { label: "GitHub", href: "https://github.com/coppolabs", icon: <Github size={18} /> },
 ];
 
@@ -54,18 +54,18 @@ const Navbar = () => {
     <>
       {/* Top bar */}
       <header className="fixed top-0 left-0 w-full z-50 bg-surface border-b border-border">
-        <div className="max-w-5xl mx-auto flex items-center px-6 py-4">
+        <div className="max-w-5xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3.5">
 
-          {/* Left: Name (Clickable Home link) */}
+          {/* Left: Name */}
           <div className="shrink-0">
             <a href="/#hero" className="inline-block hover:opacity-80 transition-opacity">
-              <h2 className="text-xl font-serif font-bold tracking-tight text-foreground whitespace-nowrap leading-none">
+              <h2 className="text-lg sm:text-xl font-serif font-bold tracking-tight text-foreground whitespace-nowrap leading-none">
                 Antonio Coppola
               </h2>
             </a>
           </div>
 
-          {/* Center: Desktop Nav Links (Equal spacing distribution) */}
+          {/* Center: Desktop Nav Links */}
           <nav className="hidden lg:flex items-center gap-4 xl:gap-5 mx-auto px-8">
             {navItems.map((item) => (
               <a
@@ -78,9 +78,8 @@ const Navbar = () => {
             ))}
           </nav>
 
-          {/* Right: Controls (Socials, Theme, Language) */}
+          {/* Right: Desktop Controls */}
           <div className="hidden lg:flex items-center gap-3 shrink-0">
-            {/* Social Icons */}
             <div className="flex items-center gap-1">
               {links.map((link) => (
                 <div key={link.label} className="relative group flex items-center justify-center">
@@ -100,7 +99,6 @@ const Navbar = () => {
               ))}
             </div>
 
-            {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
               aria-label="Toggle theme"
@@ -109,41 +107,27 @@ const Navbar = () => {
               {isDark ? <Sun size={18} /> : <Moon size={18} />}
             </button>
 
-            {/* Language Switcher */}
             <div className="pl-2 border-l border-border flex items-center">
               <LanguageSwitcher />
             </div>
           </div>
 
-          {/* Mobile Actions */}
-          <div className="flex lg:hidden items-center gap-2 ml-auto">
-            <div className="flex items-center gap-1.5 mr-1">
-              {links.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-foreground/60 hover:text-primary transition-colors p-1 flex items-center"
-                >
-                  {link.icon}
-                </a>
-              ))}
-            </div>
-
+          {/* Mobile Right Controls: Spaced cleanly */}
+          <div className="flex lg:hidden items-center gap-1.5 sm:gap-2 shrink-0">
             <LanguageSwitcher />
 
             <button
               onClick={toggleTheme}
               aria-label="Toggle theme"
-              className="p-2 rounded-md text-foreground/60 hover:text-primary transition-colors flex items-center justify-center"
+              className="p-1.5 rounded-md text-foreground/70 hover:text-foreground transition-colors flex items-center justify-center"
             >
-              {isDark ? <Sun size={20} /> : <Moon size={20} />}
+              {isDark ? <Sun size={18} /> : <Moon size={18} />}
             </button>
 
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="p-2 rounded-md text-foreground flex items-center justify-center"
+              aria-label="Toggle menu"
+              className="p-1.5 rounded-md text-foreground flex items-center justify-center"
             >
               {mobileOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
@@ -151,21 +135,37 @@ const Navbar = () => {
         </div>
       </header>
 
-      {/* Mobile dropdown */}
+      {/* Mobile Dropdown Menu */}
       {mobileOpen && (
-        <div className="fixed top-[60px] left-0 w-full bg-surface border-b border-border z-40 px-6 py-4 flex flex-col lg:hidden shadow-lg">
+        <div className="fixed top-[57px] left-0 w-full bg-surface border-b border-border z-40 px-6 py-5 flex flex-col gap-4 lg:hidden shadow-xl">
           <nav className="grid grid-cols-2 gap-x-4 gap-y-1">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileOpen(false)}
-                className="text-sm text-foreground/80 hover:text-primary py-2 transition-colors border-b border-border/50 last:border-0"
+                className="text-sm font-medium text-foreground/80 hover:text-primary py-2 transition-colors border-b border-border/40"
               >
                 {t(`nav.${item.key}`)}
               </a>
             ))}
           </nav>
+
+          {/* Social Links Row inside Mobile Dropdown */}
+          <div className="pt-2 flex items-center justify-around border-t border-border/60">
+            {links.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-xs font-medium text-foreground/70 hover:text-primary p-2 rounded-md hover:bg-primary/5 transition-colors"
+              >
+                {link.icon}
+                <span>{link.label}</span>
+              </a>
+            ))}
+          </div>
         </div>
       )}
     </>
