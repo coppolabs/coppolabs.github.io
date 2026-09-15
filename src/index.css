@@ -6,47 +6,55 @@
 
 @layer base {
   :root {
+    /* Pure soft white background inspired by the crisp shirt */
     --background: 0 0% 100%;
-    --foreground: 220 13% 18%;
+    /* Deep dark navy/charcoal derived from the suit jacket */
+    --foreground: 218 35% 15%;
 
-    --card: 210 20% 98%;
-    --card-foreground: 220 13% 18%;
+    /* Soft cool gray background for cards, pulled from the studio backdrop */
+    --card: 216 12% 95%;
+    --card-foreground: 218 35% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 13% 18%;
+    --popover-foreground: 218 35% 15%;
 
-    --primary: 38 92% 50%;
+    /* Deep classic navy blue ( suit jacket primary color ) */
+    --primary: 218 42% 18%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 20% 98%;
-    --secondary-foreground: 220 13% 18%;
+    /* Subtle neutral slate container background */
+    --secondary: 216 10% 92%;
+    --secondary-foreground: 218 35% 15%;
 
-    --muted: 220 9% 46%;
-    --muted-foreground: 220 9% 46%;
+    /* Medium studio gray tone */
+    --muted: 216 8% 52%;
+    --muted-foreground: 216 8% 46%;
 
-    --accent: 38 92% 50%;
+    /* Warm amber/bronze accent tone sampled from warm skin highlights */
+    --accent: 28 55% 52%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 38 92% 50%;
+    /* Soft subtle border lines matching background gray shifts */
+    --border: 216 12% 88%;
+    --input: 216 12% 88%;
+    --ring: 218 42% 18%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 210 20% 98%;
-    --sidebar-foreground: 220 13% 18%;
-    --sidebar-primary: 38 92% 50%;
+    --sidebar-background: 216 12% 96%;
+    --sidebar-foreground: 218 35% 15%;
+    --sidebar-primary: 218 42% 18%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 38 92% 95%;
-    --sidebar-accent-foreground: 220 13% 18%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 38 92% 50%;
+    --sidebar-accent: 28 55% 94%;
+    --sidebar-accent-foreground: 218 35% 15%;
+    --sidebar-border: 216 12% 88%;
+    --sidebar-ring: 218 42% 18%;
 
-    --surface: 210 20% 98%;
-    --meta: 220 9% 46%;
+    --surface: 216 12% 96%;
+    --meta: 216 8% 46%;
   }
 }
 
@@ -59,7 +67,10 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
 
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     @apply font-serif;
   }
 }
@@ -74,6 +85,7 @@
       opacity: 0;
       transform: translateY(12px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
