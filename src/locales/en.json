@@ -120,6 +120,43 @@
             }
         }
     },
+    "education": {
+        "title": "Education",
+        "phd": {
+            "degree": "Ph.D. in Operations Research",
+            "institution": "Technical University of Munich",
+            "location": "Germany",
+            "dates": "2022 – 2026",
+            "details": "Thesis: “Balanced and Staggered Routing in Autonomous Mobility-on-Demand Systems”"
+        },
+        "msc": {
+            "degree": "M.Sc. in Industrial Engineering (110/110 cum laude)",
+            "institution": "University of Naples Federico II",
+            "location": "Italy",
+            "dates": "2018 – 2021",
+            "details": "Thesis: “Reconstruction of the Connectivity of Diffusion Network Processes from Temporal Traces”"
+        },
+        "erasmus": {
+            "degree": "Erasmus+ Exchange Program",
+            "institution": "Universidade do Minho",
+            "location": "Portugal",
+            "dates": "2019",
+            "details": "Completed an exchange semester in Industrial Engineering with coursework conducted in Portuguese"
+        },
+        "bsc": {
+            "degree": "B.Sc. in Industrial Engineering",
+            "institution": "University of Naples Federico II",
+            "location": "Italy",
+            "dates": "2014 – 2018"
+        },
+        "esabac": {
+            "degree": "EsaBac – Italian–French Dual Diploma",
+            "institution": "Liceo Classico Europeo",
+            "location": "Naples, Italy",
+            "dates": "2009 – 2014",
+            "details": "Bilingual curriculum awarding both Italian and French diplomas"
+        }
+    },
     "research": {
         "title": "Research & Publications",
         "sections": {

@@ -120,6 +120,43 @@
       }
     }
   },
+  "education": {
+    "title": "Ausbildung",
+    "phd": {
+      "degree": "Doktorat (Ph.D.) in Operations Research",
+      "institution": "Technische Universität München",
+      "location": "Deutschland",
+      "dates": "2022 – 2026",
+      "details": "Dissertation: „Balanced and Staggered Routing in Autonomous Mobility-on-Demand Systems“"
+    },
+    "msc": {
+      "degree": "M.Sc. in Wirtschafts\u00ADingenieurwesen (110/110 cum laude)",
+      "institution": "Universität Neapel Federico II",
+      "location": "Italien",
+      "dates": "2018 – 2021",
+      "details": "Masterarbeit: „Reconstruction of the Connectivity of Diffusion Network Processes from Temporal Traces“"
+    },
+    "erasmus": {
+      "degree": "Erasmus+ Austauschprogramm",
+      "institution": "Universidade do Minho",
+      "location": "Portugal",
+      "dates": "2019",
+      "details": "Austauschsemester im Wirtschafts\u00ADingenieurwesen mit Lehrveranstaltungen auf Portugiesisch"
+    },
+    "bsc": {
+      "degree": "B.Sc. in Wirtschafts\u00ADingenieurwesen",
+      "institution": "Universität Neapel Federico II",
+      "location": "Italien",
+      "dates": "2014 – 2018"
+    },
+    "esabac": {
+      "degree": "EsaBac – Italienisch-Französisches Doppeldiplom",
+      "institution": "Liceo Classico Europeo",
+      "location": "Neapel, Italien",
+      "dates": "2009 – 2014",
+      "details": "Zweisprachiger Bildungsgang mit gleichzeitigem Erwerb des italienischen und französischen Abiturs"
+    }
+  },
   "research": {
     "title": "Forschung & Publikationen",
     "sections": {

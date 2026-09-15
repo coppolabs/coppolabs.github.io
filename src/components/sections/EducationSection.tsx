@@ -1,73 +1,52 @@
+import { useTranslation } from "react-i18next";
 import SectionWrapper from "@/components/SectionWrapper";
 import SectionTitle from "@/components/SectionTitle";
-import { GraduationCap } from "lucide-react";
 
+const educationKeys = ["phd", "msc", "erasmus", "bsc", "esabac"] as const;
 
+const EducationSection = () => {
+  const { t } = useTranslation();
 
-const education = [
-  {
-    degree: "Ph.D. in Operations Research",
-    institution: "**Technical University of Munich**, Germany",
-    dates: "2022 – 2026",
-    details: "Thesis: “Balanced and Staggered Routing in Autonomous Mobility-on-Demand Systems”",
-  },
-  {
-    degree: "M.Sc. in Industrial Engineering (110/110 cum laude)",
-    institution: "**University of Naples Federico II**, Italy",
-    dates: "2018 – 2021",
-    details: "Thesis: “Reconstruction of the Connectivity of Diffusion Network Processes from Temporal Traces”",
-  },
-  {
-    degree: "Erasmus+ Exchange Program",
-    institution: "**Universidade do Minho**, Portugal",
-    dates: "2019",
-    details: "Completed an exchange semester in Industrial Engineering with coursework conducted in Portuguese",
-  },
-  {
-    degree: "B.Sc. in Industrial Engineering ",
-    institution: "**University of Naples Federico II**, Italy",
-    dates: "2014 – 2018"
-  },
-  {
-    degree: "EsaBac – Italian–French Dual Diploma",
-    institution: "**Liceo Classico Europeo**, Naples, Italy",
-    dates: "2009 – 2014",
-    details: "Bilingual curriculum awarding both Italian and French diplomas",
-  },
-];
+  return (
+    <SectionWrapper id="education" variant="band">
+      <SectionTitle>{t("education.title")}</SectionTitle>
 
-const EducationSection = () => (
-  <SectionWrapper id="education" variant="band">
-    <SectionTitle>Education</SectionTitle>
+      <div className="mt-8 space-y-8">
+        {educationKeys.map((key) => {
+          const details = t(`education.${key}.details`, { defaultValue: "" });
 
-    <div className="mt-8 space-y-8">
-      {education.map((ed, i) => (
-        <div key={i} className="relative pl-8 before:absolute before:left-0 before:top-2 before:bottom-0 before:w-px before:bg-border last:before:bottom-8">
-          {/* Timeline Dot */}
-          <div className="absolute left-[-4px] top-2 w-2 h-2 rounded-full bg-primary" />
+          return (
+            <div
+              key={key}
+              className="relative pl-8 before:absolute before:left-0 before:top-2 before:bottom-0 before:w-px before:bg-border last:before:bottom-8"
+            >
+              {/* Timeline Dot */}
+              <div className="absolute left-[-4px] top-2 w-2 h-2 rounded-full bg-primary" />
 
-          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
-            <h4 className="font-sans font-bold text-foreground text-base leading-tight">
-              {ed.degree}
-            </h4>
-            <span className="text-xs font-sans font-medium uppercase tracking-wider text-primary whitespace-nowrap">
-              {ed.dates}
-            </span>
-          </div>
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
+                <h4 className="font-sans font-bold text-foreground text-base leading-tight">
+                  {t(`education.${key}.degree`)}
+                </h4>
+                <span className="text-xs font-sans font-medium uppercase tracking-wider text-primary whitespace-nowrap">
+                  {t(`education.${key}.dates`)}
+                </span>
+              </div>
 
-          <p className="text-sm text-foreground/90 font-sans mt-1">
-            <span dangerouslySetInnerHTML={{ __html: ed.institution.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
-          </p>
+              <p className="text-sm text-foreground/90 font-sans mt-1">
+                <strong>{t(`education.${key}.institution`)}</strong>, {t(`education.${key}.location`)}
+              </p>
 
-          {ed.details && (
-            <p className="text-sm text-foreground/60 font-sans mt-1 italic leading-relaxed">
-              {ed.details}
-            </p>
-          )}
-        </div>
-      ))}
-    </div>
-  </SectionWrapper>
-);
+              {details && (
+                <p className="text-sm text-foreground/60 font-sans mt-1 italic leading-relaxed">
+                  {details}
+                </p>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </SectionWrapper>
+  );
+};
 
 export default EducationSection;
