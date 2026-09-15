@@ -51,15 +51,16 @@
             }
         },
         "p1": {
-            "part1": "My engineering journey began in Naples, Italy, where I completed my B.Sc. and M.Sc. in Industrial Engineering (graduating 110/110 cum laude), focusing on the control and dynamics of complex networks alongside",
-            "part2": ". Driven by a passion for large-scale operational optimization, I moved to Germany to pursue a Ph.D. at the Technical University of Munich supervised by",
-            "part3": ", specializing in scalable algorithms, matheuristics, and machine learning for intelligent mobility systems."
+            "part1": "My engineering journey began in Naples, Italy, where I completed my B.Sc. and M.Sc. in Industrial Engineering (110/110 cum laude). I started out working on complex networks and control together with",
+            "part2": ". This experience gave me a strong foundation in mathematical modeling and computational problem-solving and led me toward large-scale optimization. I then moved to Germany to pursue a Ph.D. at the Technical University of Munich under the supervision of",
+            "part3": ", where I focused on scalable algorithms, machine learning, and intelligent mobility systems."
         },
         "p2": {
-            "part1": "During my Ph.D., I validated these methods on real-world operational problems in collaboration with industry leaders like BMW, SWM, and MAN. I also served as a visiting researcher at Polytechnique Montréal, hosted by",
-            "part2": ", where I focused on Large Neighborhood Search (LNS) metaheuristics for large-scale vehicle routing problems."
+            "part1": "During my Ph.D., I worked with BMW, SWM, and MAN on real-world mobility applications, turning optimization models into software and data-driven solutions and validating them through field trials. I also spent time at Polytechnique Montréal with",
+            "part2": ", working on large-scale vehicle routing and Large Neighborhood Search (LNS) algorithms.",
+            "part3": ""
         },
-        "p3": "I obtained my Ph.D. in 2026. Beyond research, I developed end-to-end software pipelines, supervised Master's theses, contributed to teaching, and deployed demand-responsive transit systems in real-world field trials.",
+        "p3": "I obtained my Ph.D. in 2026. Today, I work at the intersection of optimization, AI/ML, and software engineering, taking solutions from problem formulation and algorithm design through experimentation, production-oriented development, and deployment. My experience spans optimization, machine learning, data pipelines, and Generative AI, including agentic LLM workflows, with a focus on turning advanced methods into practical, scalable solutions.",
         "videoLegend": {
             "passenger": "passenger",
             "pickup": "pickup",

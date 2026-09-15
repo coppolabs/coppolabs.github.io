@@ -51,15 +51,16 @@
       }
     },
     "p1": {
-      "part1": "Mein Weg als Ingenieur begann im italienischen Neapel, wo ich mein B.Sc.- und M.Sc.-Studium des Wirtschaftsingenieurwesens mit Auszeichnung (110/110 cum laude) absolvierte. Mein Schwerpunkt lag dabei auf der Steuerung und Dynamik komplexer Netzwerke zusammen mit",
-      "part2": ". Getrieben von der Faszination für großskalige operative Optimierung zog ich nach Deutschland, um an der Technischen Universität München unter der Betreuung von",
-      "part3": "zu promovieren. Hier spezialisierte ich mich auf skalierbare Algorithmen, Matheuristiken und Machine Learning für intelligente Mobilitätssysteme."
+      "part1": "Mein Weg als Ingenieur begann im italienischen Neapel, wo ich mein B.Sc.- und M.Sc.-Studium des Wirtschaftsingenieurwesens mit Auszeichnung (110/110 cum laude) absolvierte. Dabei beschäftigte ich mich zunächst mit komplexen Netzwerken und deren Steuerung zusammen mit",
+      "part2": ". Diese Erfahrung legte den Grundstein für meine Expertise in mathematischer Modellierung und algorithmischer Problemlösung und führte mich zur großskaligen Optimierung. Anschließend zog ich nach Deutschland, um an der Technischen Universität München unter der Betreuung von",
+      "part3": "zu promovieren. Dort spezialisierte ich mich auf skalierbare Algorithmen, Machine Learning und intelligente Mobilitätssysteme."
     },
     "p2": {
-      "part1": "Während meiner Promotion validierte ich diese Methoden an realen operativen Problemen in Zusammenarbeit mit führenden Industrieunternehmen wie BMW, den SWM und MAN. Zudem verbrachte ich einen Forschungsaufenthalt an der Polytechnique Montréal bei",
-      "part2": ", wo ich mich auf Large Neighborhood Search (LNS) Metaheuristiken für großskalige Vehicle-Routing-Probleme konzentrierte."
+      "part1": "Während meiner Promotion arbeitete ich mit BMW, den SWM und MAN an realen Mobilitätsanwendungen und überführte Optimierungsmodelle in Software- und datengetriebene Lösungen, die durch Feldversuche validiert wurden. Zudem verbrachte ich einen Forschungsaufenthalt an der Polytechnique Montréal bei",
+      "part2": ", wo ich mich mit großskaligen Vehicle-Routing-Problemen und Large Neighborhood Search (LNS) Algorithmen beschäftigte.",
+      "part3": ""
     },
-    "p3": "Im Jahr 2026 schloss ich meine Promotion erfolgreich ab. Neben meiner Forschung entwickelte ich durchgehende Softwarepipelines, betreute Masterarbeiten, wirkte in der Lehre mit und setzte bedarfsorientierte Transit-Systeme in realen Feldversuchen ein.",
+    "p3": "2026 habe ich meine Promotion erfolgreich abgeschlossen. Heute arbeite ich an der Schnittstelle von Optimierung, AI/ML und Software Engineering und begleite Lösungen von der Problemformulierung und Algorithmusentwicklung über Experimente und produktionsnahe Softwareentwicklung bis hin zur Umsetzung. Meine Erfahrung umfasst Optimierung, Machine Learning, Datenpipelines und Generative AI, einschließlich agentischer LLM-Workflows, mit dem Ziel, fortschrittliche Methoden in praktische und skalierbare Lösungen zu überführen.",
     "videoLegend": {
       "passenger": "Fahrgast",
       "pickup": "Abholung",
