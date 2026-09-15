@@ -26,8 +26,8 @@
     "timeline": {
       "naples": {
         "city": "Neapel",
-        "institution": "Universität Neapel Federico II",
-        "details": "B.Sc. & M.Sc. in Wirtschaftsingenieurwesen"
+        "institution": "Federico II",
+        "details": "Wirtschaftsingenieurwesen"
       },
       "braga": {
         "city": "Braga",
@@ -36,18 +36,18 @@
       },
       "munichLaunch": {
         "city": "München",
-        "institution": "Technische Universität München",
+        "institution": "TUM",
         "details": "Beginn der Promotion"
       },
       "montreal": {
         "city": "Montreal",
         "institution": "Polytechnique Montréal",
-        "details": "Forschungsaufenthalt (Vehicle Routing)"
+        "details": "Forschungsaufenthalt"
       },
       "munichAwarded": {
         "city": "München",
-        "institution": "Technische Universität München",
-        "details": "Abschluss der Promotion"
+        "institution": "TUM",
+        "details": "Promotionsabschluss"
       }
     },
     "p1": {
@@ -220,32 +220,32 @@
       "tsl2026": {
         "title": "Online Balanced and Staggered Routing in AMoD Systems",
         "event": "TSL Conference, MIT (akzeptiert)",
-        "year": "Juli 2026"
+        "year": "2026"
       },
       "jopt2025": {
         "title": "Integrated Balanced and Staggered Routing in AMoD Systems",
         "event": "JOPT Conference, Montreal, Kanada",
-        "year": "Mai 2025"
+        "year": "2025"
       },
       "or2024": {
         "title": "Integrated Balanced and Staggered Routing in AMoD Systems: Preliminary Results",
         "event": "OR Conference, München, Deutschland",
-        "year": "Sept. 2024"
+        "year": "2024"
       },
       "jads2023": {
         "title": "Data-driven Intermodal Autonomous Mobility: Operations and Control",
         "event": "JADS Symposium, London, UK",
-        "year": "Nov. 2023"
+        "year": "2023"
       },
       "tsl2023": {
         "title": "Staggered Routing in Autonomous Mobility-on-Demand Systems",
         "event": "TSL Conference, Chicago, USA",
-        "year": "Juli 2023"
+        "year": "2023"
       },
       "euro2022": {
         "title": "Staggered Routing in Autonomous Mobility-on-Demand Systems: Preliminary Results",
         "event": "EURO Conference, Helsinki, Finnland",
-        "year": "Juli 2022"
+        "year": "2022"
       }
     }
   },

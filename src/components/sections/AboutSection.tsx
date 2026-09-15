@@ -41,7 +41,7 @@ const AboutSection = () => {
     },
   ];
 
-  // Track the selected event on mobile (defaults to the current/latest event)
+  // Track the selected event on mobile (defaults to current/latest event)
   const [activeIndex, setActiveIndex] = useState(
     timelineEvents.findIndex((evt) => evt.current) ?? 0
   );
@@ -50,8 +50,8 @@ const AboutSection = () => {
     <SectionWrapper id="about" variant="band">
       <SectionTitle>{t("about.title")}</SectionTitle>
 
-      {/* Lean Line Timeline (Desktop Only) */}
-      <div className="-mt-2 mb-14 relative px-4 hidden md:block">
+      {/* Lean Line Timeline (Desktop & Mid-screens) */}
+      <div className="-mt-2 mb-14 relative px-4 hidden sm:block">
         {/* Continuous Structural Track Line */}
         <div className="absolute top-[29px] left-8 right-8 h-[2px] bg-slate-200/80" />
 
@@ -76,14 +76,15 @@ const AboutSection = () => {
               {/* Text Description Stack */}
               <div className="space-y-1 px-2">
                 <div>
-                  <h5 className={`text-sm font-bold font-sans inline-block ${evt.current ? "text-primary dark:text-foreground/80" : "text-primary-800 dark:text-foreground/60"}`} >
+                  <h5 className={`text-sm font-bold font-sans inline-block ${evt.current ? "text-primary dark:text-foreground/80" : "text-primary-800 dark:text-foreground/60"}`}>
                     {evt.city}
                   </h5>
                   <p className="text-[10px] font-sans font-medium text-slate-400 leading-tight line-clamp-1 max-w-[150px] mx-auto mt-0.5">
                     {evt.institution}
                   </p>
                 </div>
-                <p className="text-[11px] text-slate-500 font-sans leading-tight max-w-[140px] mx-auto pt-0.5 border-t border-slate-100">
+                {/* Increased spacing and margin before the divider line */}
+                <p className="text-[11px] text-slate-500 font-sans leading-tight max-w-[140px] mx-auto mt-1.5 pt-1.5 border-t border-slate-100">
                   {evt.details}
                 </p>
               </div>
@@ -93,10 +94,8 @@ const AboutSection = () => {
       </div>
 
       {/* Interactive Horizontal Timeline (Mobile Only) */}
-      <div className="md:hidden -mt-2 mb-10 w-full">
-        {/* Track Line Container */}
+      <div className="sm:hidden -mt-2 mb-10 w-full">
         <div className="relative mb-6 px-4">
-          {/* Track Line */}
           <div className="absolute top-[29px] left-8 right-8 h-[2px] bg-slate-200/80" />
 
           <div className="grid grid-cols-5 relative z-10 w-full">
@@ -108,8 +107,7 @@ const AboutSection = () => {
                   onClick={() => setActiveIndex(idx)}
                   className="flex flex-col items-center text-center focus:outline-none"
                 >
-                  <span className={`text-[11px] font-bold font-sans tracking-wider transition-colors mb-2.5 ${isSelected ? "text-primary font-extrabold" : "text-slate-400"
-                    }`}>
+                  <span className={`text-[11px] font-bold font-sans tracking-wider transition-colors mb-2.5 ${isSelected ? "text-primary font-extrabold" : "text-slate-400"}`}>
                     {evt.year}
                   </span>
 
@@ -131,8 +129,6 @@ const AboutSection = () => {
 
         {/* Info Card Display for Selected Event */}
         <div className="relative mx-4 p-4 rounded-xl border border-slate-200/60 bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] transition-all duration-300">
-
-          {/* Dynamic Spike / Arrow Pointer */}
           <div
             className="absolute -top-1.5 h-3 w-3 rotate-45 border-t border-l border-slate-200/60 bg-white transition-all duration-300"
             style={{
@@ -140,10 +136,8 @@ const AboutSection = () => {
             }}
           />
 
-          {/* 3-Line Structured Text Content */}
           <div className="flex flex-col gap-1 text-left font-sans relative z-10">
-            <h5 className={`text-sm font-bold tracking-wide uppercase text-[11px] ${timelineEvents[activeIndex].current ? "text-primary" : "text-slate-800"
-              }`}>
+            <h5 className={`text-sm font-bold tracking-wide uppercase text-[11px] ${timelineEvents[activeIndex].current ? "text-primary" : "text-slate-800"}`}>
               {timelineEvents[activeIndex].city}
             </h5>
             <p className="text-xs font-semibold text-slate-500 leading-tight">
@@ -156,10 +150,11 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-10 items-start -mt-7">
+      {/* Main Content & Visualization Flex Container (Side-by-side from sm up) */}
+      <div className="flex flex-col sm:flex-row gap-6 md:gap-10 items-start -mt-7 hyphens-auto break-words">
         {/* Left Column: Text Content */}
         <div className="flex-1 max-w-none">
-          <div className="space-y-3 text-foreground/80 font-sans leading-[1.65] text-justify break-words [hyphens:auto]">
+          <div className="space-y-3 text-foreground/80 font-sans leading-[1.65] text-justify text-left hyphens-auto break-words">
             <p>
               {t("about.p1.part1")}{" "}
               <a
@@ -199,11 +194,11 @@ const AboutSection = () => {
           </div>
         </div>
 
-        {/* Right Column: Visualization */}
-        <div className="hidden md:block w-full md:w-64 flex-shrink-0 self-start">
+        {/* Right Column: Visualization (Visible on sm screens and up) */}
+        <div className="hidden sm:block w-48 md:w-60 lg:w-64 flex-shrink-0 self-start">
           <div className="overflow-hidden rounded-xl border border-primary/10 shadow-md bg-muted/20 p-1.5">
             <div className="group grayscale hover:grayscale-0 transition-all duration-700">
-              <div className="relative aspect-[16/9] md:aspect-[3/4] overflow-hidden rounded-lg">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
                 <video
                   src={flowVideo}
                   autoPlay

@@ -26,8 +26,8 @@
         "timeline": {
             "naples": {
                 "city": "Naples",
-                "institution": "University of Naples Federico II",
-                "details": "B.Sc. & M.Sc. in Industrial Engineering"
+                "institution": "Federico II",
+                "details": "Industrial Engineering"
             },
             "braga": {
                 "city": "Braga",
@@ -36,17 +36,17 @@
             },
             "munichLaunch": {
                 "city": "Munich",
-                "institution": "Technical University of Munich",
+                "institution": "TUM",
                 "details": "Ph.D. Launch"
             },
             "montreal": {
                 "city": "Montreal",
                 "institution": "Polytechnique Montréal",
-                "details": "Vehicle routing research stay"
+                "details": "Research stay"
             },
             "munichAwarded": {
                 "city": "Munich",
-                "institution": "Technical University of Munich",
+                "institution": "TUM",
                 "details": "Ph.D. awarded"
             }
         },
@@ -70,7 +70,7 @@
         "videoCaption": "Manhattan Flow Simulation",
         "funFact": {
             "label": "Fun fact",
-            "p1": "I am the frontman of a rock band, where I explore a more creative and expressive side of my personality.",
+            "p1": "I am the frontman of a rock band, where I explore a more creative side of my personality.",
             "p2": "I truly enjoy the process of writing music, performing, and connecting with live audiences."
         }
     },
@@ -220,32 +220,32 @@
             "tsl2026": {
                 "title": "Online Balanced and Staggered Routing in AMoD Systems",
                 "event": "TSL Conference, MIT (accepted)",
-                "year": "Jul 2026"
+                "year": "2026"
             },
             "jopt2025": {
                 "title": "Integrated Balanced and Staggered Routing in AMoD Systems",
                 "event": "JOPT Conference, Montréal, Canada",
-                "year": "May 2025"
+                "year": "2025"
             },
             "or2024": {
                 "title": "Integrated Balanced and Staggered Routing in AMoD Systems: Preliminary Results",
                 "event": "OR Conference, Munich, Germany",
-                "year": "Sep 2024"
+                "year": "2024"
             },
             "jads2023": {
                 "title": "Data-driven Intermodal Autonomous Mobility: Operations and Control",
                 "event": "JADS Symposium, London, UK",
-                "year": "Nov 2023"
+                "year": "2023"
             },
             "tsl2023": {
                 "title": "Staggered Routing in Autonomous Mobility-on-Demand Systems",
                 "event": "TSL Conference, Chicago, USA",
-                "year": "Jul 2023"
+                "year": "2023"
             },
             "euro2022": {
                 "title": "Staggered Routing in Autonomous Mobility-on-Demand Systems: Preliminary Results",
                 "event": "EURO Conference, Helsinki, Finland",
-                "year": "Jul 2022"
+                "year": "2022"
             }
         }
     },

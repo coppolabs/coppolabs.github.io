@@ -65,7 +65,7 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* Center: Desktop Nav Links */}
+          {/* Center: Desktop Nav Links (Hidden below lg) */}
           <nav className="hidden lg:flex items-center gap-4 xl:gap-5 mx-auto px-8">
             {navItems.map((item) => (
               <a
@@ -77,6 +77,22 @@ const Navbar = () => {
               </a>
             ))}
           </nav>
+
+          {/* Mid-Screen Social Icons (Visible from `sm` breakpoint up to `lg`) */}
+          <div className="hidden sm:flex lg:hidden items-center gap-1 mx-auto">
+            {links.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={link.label}
+                className="text-foreground/60 hover:text-primary transition-colors p-1.5 rounded hover:bg-primary/5 flex items-center justify-center"
+              >
+                {link.icon}
+              </a>
+            ))}
+          </div>
 
           {/* Right: Desktop Controls */}
           <div className="hidden lg:flex items-center gap-3 shrink-0">
@@ -112,7 +128,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Mobile Right Controls: Spaced cleanly */}
+          {/* Mobile/Tablet Right Controls */}
           <div className="flex lg:hidden items-center gap-1.5 sm:gap-2 shrink-0">
             <LanguageSwitcher />
 
@@ -135,10 +151,11 @@ const Navbar = () => {
         </div>
       </header>
 
-      {/* Mobile Dropdown Menu */}
+      {/* Mobile/Tablet Dropdown Menu */}
       {mobileOpen && (
         <div className="fixed top-[57px] left-0 w-full bg-surface border-b border-border z-40 px-6 py-5 flex flex-col gap-4 lg:hidden shadow-xl">
-          <nav className="grid grid-cols-2 gap-x-4 gap-y-1">
+          {/* Grid layout: 2 columns on mobile, 3 columns on mid-screen (`sm`) */}
+          <nav className="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-1">
             {navItems.map((item) => (
               <a
                 key={item.href}
@@ -151,8 +168,8 @@ const Navbar = () => {
             ))}
           </nav>
 
-          {/* Social Links Row inside Mobile Dropdown */}
-          <div className="pt-2 flex items-center justify-around border-t border-border/60">
+          {/* Social Links Row in Dropdown: Visible only on mobile (< sm) */}
+          <div className="pt-2 flex sm:hidden items-center justify-around border-t border-border/60">
             {links.map((link) => (
               <a
                 key={link.label}

@@ -15,23 +15,25 @@ const HeroSection = () => {
     >
       <div className="max-w-4xl mx-auto w-full px-6 sm:px-8 md:px-12">
         {/* Header */}
-        <div className="mb-4 text-center sm:text-left">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-foreground leading-tight">
+        <div className="mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-foreground leading-tight text-center">
             {t("hero.name")}
           </h1>
 
-          {/* Subtitles: Made slightly smaller on mid-screens (xs -> sm -> base) to keep everything single-line */}
-          <div className="text-xs sm:text-sm md:text-base text-primary mt-3 font-sans font-medium uppercase tracking-wider flex flex-col sm:flex-row sm:items-center justify-center sm:justify-start gap-1 sm:gap-2">
-            <span className="whitespace-nowrap">{t("hero.title1")}</span>
-            <span className="hidden sm:inline text-primary/40">•</span>
-            <span className="whitespace-nowrap">{t("hero.title2")}</span>
-            <span className="hidden sm:inline text-primary/40">•</span>
-            <span className="whitespace-nowrap">{t("hero.title3")}</span>
+          {/* Subtitles: Centered across full container width with larger text on mobile */}
+          <div className="w-full flex justify-center mt-3">
+            <div className="text-sm sm:text-base md:text-lg text-primary font-sans font-medium uppercase tracking-wider flex flex-col sm:flex-row items-center justify-center gap-1.5 sm:gap-2">
+              <span className="whitespace-nowrap">{t("hero.title1")}</span>
+              <span className="hidden sm:inline text-primary/40">•</span>
+              <span className="whitespace-nowrap">{t("hero.title2")}</span>
+              <span className="hidden sm:inline text-primary/40">•</span>
+              <span className="whitespace-nowrap">{t("hero.title3")}</span>
+            </div>
           </div>
         </div>
 
         {/* Side-by-side layout starting at sm breakpoint */}
-        <div className="flex flex-col sm:flex-row items-stretch gap-5 lg:gap-6">
+        <div className="flex flex-col sm:flex-row items-stretch gap-5 lg:gap-6 mt-6">
           {/* Profile image (Desktop / Tablet) */}
           <div className="hidden sm:block flex-shrink-0 w-44 sm:w-48 md:w-60 lg:w-64 mx-auto sm:mx-0">
             <img
@@ -45,12 +47,12 @@ const HeroSection = () => {
           <div className="flex-1 flex flex-col justify-between text-center sm:text-left">
             <div
               lang={i18n.language}
-              className="max-w-[530px] text-foreground/80 font-sans leading-relaxed text-left hyphens-auto break-words space-y-2"
+              className="max-w-[530px] text-foreground/80 font-sans leading-relaxed text-justify hyphens-auto break-words space-y-2"
             >
               <p>{t("hero.paragraph1")}</p>
               <p>{t("hero.paragraph2")}</p>
               <p>{t("hero.paragraph3")}</p>
-              <p className="mt-2 text-sm font-medium border-l-2 border-primary/30 pl-4 italic text-left">
+              <p className="mt-2 text-sm font-medium border-l-2 border-primary/30 pl-4 italic text-justify">
                 {t("hero.callout")}
               </p>
             </div>
