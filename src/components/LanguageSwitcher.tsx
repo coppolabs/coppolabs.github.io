@@ -15,7 +15,10 @@ const languages = [
 
 export const LanguageSwitcher = () => {
     const { i18n } = useTranslation();
-    const currentLang = i18n.language?.slice(0, 2) || "en";
+
+    // Extract 2-letter code and ensure it's strictly 'en' or 'de'
+    const detected = i18n.language?.slice(0, 2).toLowerCase();
+    const currentLang = languages.some((lang) => lang.code === detected) ? detected : "en";
 
     const handleLanguageChange = (code: string) => {
         i18n.changeLanguage(code);
