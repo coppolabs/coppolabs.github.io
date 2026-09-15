@@ -1,0 +1,271 @@
+{
+    "hero": {
+        "name": "Antonio Coppola, Ph.D.",
+        "title1": "Optimization Engineer",
+        "title2": "Operations Research",
+        "title3": "Artificial Intelligence",
+        "paragraph1": "I am a Software and Optimization Engineer with a Ph.D. in Operations Research and Machine Learning and +4 years of experience developing algorithmic solutions and software for large-scale operational problems. I leverage combinatorial optimization, machine learning, and artificial intelligence as core methodologies.",
+        "paragraph2": "My work focuses on large-scale transportation, transit, and mobility systems, where I design, benchmark, and deploy optimization models, software, and data pipelines for real-world operational challenges. Beyond mobility, my expertise extends to resource allocation, scheduling, routing, network design, and decision-support systems.",
+        "paragraph3": "Ich schlage die Brücke zwischen Theo\u00ADrie und Praxis, indem ich fort\u00ADge\u00ADschrit\u00ADte\u00ADne ma\u00ADthe\u00ADma\u00ADti\u00ADsche Mo\u00ADdel\u00ADle in ro\u00ADbus\u00ADte, hoch\u00ADper\u00ADfor\u00ADman\u00ADte Soft\u00ADware\u00ADsys\u00ADte\u00ADme über\u00ADset\u00ADze. Von der Al\u00ADgo\u00ADrith\u00ADmen\u00ADent\u00ADwick\u00ADlung über Da\u00ADten\u00ADstruk\u00ADtu\u00ADren und Bench\u00ADmar\u00ADking bis hin zur Be\u00ADreit\u00ADstel\u00ADlung er\u00ADstel\u00ADle ich Lö\u00ADsun\u00ADgen in Py\u00ADthon, C++, Type\u00ADScript und Ju\u00ADlia un\u00ADter Be\u00ADrück\u00ADsich\u00ADti\u00ADgung re\u00ADa\u00ADler be\u00ADtrieb\u00ADli\u00ADchen Rah\u00ADmen\u00ADbe\u00ADdin\u00ADgun\u00ADgen.",
+        "callout": "I’m always open to industry opportunities, research collaborations, or simply connecting to share ideas. Feel free to reach out!",
+        "btnResume": "View Resume",
+        "btnContact": "Get in Touch"
+    },
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "experience": "Experience",
+        "education": "Education",
+        "research": "Research",
+        "talks": "Talks",
+        "awards": "Awards",
+        "skills": "Skills"
+    },
+    "about": {
+        "title": "My Journey as an Engineer & Researcher",
+        "timeline": {
+            "naples": {
+                "city": "Naples",
+                "institution": "University of Naples Federico II",
+                "details": "B.Sc. & M.Sc. in Industrial Engineering"
+            },
+            "braga": {
+                "city": "Braga",
+                "institution": "Universidade do Minho",
+                "details": "Erasmus+ Exchange"
+            },
+            "munichLaunch": {
+                "city": "Munich",
+                "institution": "Technical University of Munich",
+                "details": "Ph.D. Launch"
+            },
+            "montreal": {
+                "city": "Montreal",
+                "institution": "Polytechnique Montréal",
+                "details": "Vehicle routing research stay"
+            },
+            "munichAwarded": {
+                "city": "Munich",
+                "institution": "Technical University of Munich",
+                "details": "Ph.D. awarded"
+            }
+        },
+        "p1": {
+            "part1": "My engineering journey began in Naples, Italy, where I completed my B.Sc. and M.Sc. in Industrial Engineering (graduating 110/110 cum laude), focusing on the control and dynamics of complex networks alongside",
+            "part2": ". Driven by a passion for large-scale operational optimization, I moved to Germany to pursue a Ph.D. at the Technical University of Munich supervised by",
+            "part3": ", specializing in scalable algorithms, matheuristics, and machine learning for intelligent mobility systems."
+        },
+        "p2": {
+            "part1": "During my Ph.D., I validated these methods on real-world operational problems in collaboration with industry leaders like BMW, SWM, and MAN. I also served as a visiting researcher at Polytechnique Montréal, hosted by",
+            "part2": ", where I focused on Large Neighborhood Search (LNS) metaheuristics for large-scale vehicle routing problems."
+        },
+        "p3": "I awarded my Ph.D. in 2026. Beyond research, I developed end-to-end software pipelines, supervised Master's theses, contributed to teaching, and deployed demand-responsive transit systems in real-world field trials.",
+        "videoLegend": {
+            "passenger": "passenger",
+            "pickup": "pickup",
+            "rebalancing": "rebalancing",
+            "idle": "idle"
+        },
+        "videoCaption": "Manhattan Flow Simulation",
+        "funFact": {
+            "label": "Fun fact",
+            "p1": "I am the frontman of a rock band, where I explore a more creative and expressive side of my personality.",
+            "p2": "I truly enjoy the process of writing music, performing, and connecting with live audiences."
+        }
+    },
+    "experience": {
+        "title": "Working Experience",
+        "items": {
+            "steam": {
+                "position": "Optimization Engineer — Transit Systems",
+                "projectName": "STEAM Project",
+                "orgSuffix": "• MCube Cluster (Munich Cluster for the Future of Mobility)",
+                "details": [
+                    "Developed an optimization system end-to-end, from problem definition and algorithm design through implementation and field testing",
+                    "Implemented algorithmic solutions for real operational requirements in collaboration with industry partners (BMW, SWM, MAN)",
+                    "Developed and validated software and data pipelines using GPS telemetry from real-world operations",
+                    "Designed demand-responsive scheduling logic that reduced passenger walking distances by 20% and increased vehicle occupancy by 15%"
+                ]
+            },
+            "tum": {
+                "position": "Optimization & AI Engineer — Intelligent Mobility",
+                "orgPrefix": "Technical University of Munich • Supervised by",
+                "details": [
+                    "Developed scalable algorithmic solutions for complex mobility problems across the software lifecycle: data, modeling, implementation, experimentation, and deployment",
+                    "Implemented optimization algorithms combining matheuristics, metaheuristics, and machine learning (GNNs, predictive modeling)",
+                    "Reduced congestion-related delays by up to 35% versus baseline under realistic urban demand scenarios",
+                    "Developed and maintained software and data pipelines in Python, Julia, and C++ using Git and CI/CD workflows",
+                    "Benchmarked solution quality, runtime, and computational scalability of algorithmic methods",
+                    "Developed ML models and GenAI/LLM workflows for algorithmic and data-driven applications",
+                    "Communicated technical results and solution approaches to academic and industry stakeholders"
+                ]
+            },
+            "polytechnique": {
+                "position": "Optimization Engineer — Vehicle Routing",
+                "orgPrefix": "Polytechnique Montréal • Supervised by",
+                "details": [
+                    "Implemented and benchmarked Large Neighborhood Search (LNS) algorithms for real-world vehicle routing problems",
+                    "Evaluated algorithmic solutions in terms of solution quality and computational performance",
+                    "Contributed to international operations research collaborations and academic reading groups"
+                ]
+            },
+            "unina": {
+                "position": "Systems Engineering Intern — Network Dynamics",
+                "orgPrefix": "University of Naples Federico II • Supervised by",
+                "details": [
+                    "Developed analysis and modeling methods for complex network dynamical systems",
+                    "Co-authored peer-reviewed publication in IEEE Control Systems Letters"
+                ]
+            }
+        }
+    },
+    "research": {
+        "title": "Research & Publications",
+        "sections": {
+            "phdThesis": "Ph.D. Thesis",
+            "publications": "Publications",
+            "workingPapers": "Working Papers & Preprints"
+        },
+        "actions": {
+            "readAbstract": "Read abstract",
+            "showLess": "Show less",
+            "pdf": "PDF",
+            "slides": "Slides",
+            "code": "Code",
+            "paperPage": "Paper page"
+        },
+        "videoCaption": "Manhattan Flow Simulation",
+        "videoLegend": {
+            "passenger": "passenger",
+            "pickup": "pickup",
+            "rebalancing": "rebalancing",
+            "idle": "idle"
+        },
+        "thesis": {
+            "title": "Balanced and Staggered Routing in Autonomous Mobility-on-Demand Systems",
+            "authors": "Antonio Coppola",
+            "venue": "Ph.D. Thesis, Technical University of Munich, 2026",
+            "abstract": "Autonomous mobility-on-demand (AMoD) systems redefine urban ride-hailing by replacing decentralized driver decisions with centrally coordinated fleets of self-driving vehicles. Centralized control enables system-level optimization of routing and departure decisions, offering the potential to enhance vehicle utilization, reduce operating costs, and alleviate congestion compared to traditional ride-hailing services. However, realizing these gains requires routing algorithms that coordinate large-scale fleets across space and time under demand uncertainty and evolving traffic conditions, all while remaining computationally tractable for real-world urban networks. This thesis develops a unified optimization framework for the spatiotemporal coordination of AMoD operations, structured around two complementary mechanisms: balanced and staggered routing. The framework builds on a discretized adaptation of Vickrey's bottleneck model, capturing the essential dynamics of congestion propagation and vehicle interactions. The analysis progresses from offline planning with perfect information to real-time control under uncertainty, incrementally increasing both modeling fidelity and operational realism. The first part establishes the methodological foundation by introducing and analyzing staggered routing as a mechanism for temporal coordination along fixed routes, formulating the problem as a mixed-integer linear program and developing a scalable matheuristic. A first case study on the Manhattan network demonstrates that temporal coordination substantially reduces traffic delays and improves network efficiency. Building on these insights, the second part integrates balanced and staggered routing into a unified framework for jointly optimizing vehicle routes and departure times, developing a metaheuristic based on large neighborhood search to address city-wide combinatorial complexity. A second case study reveals that spatial load balancing and temporal staggering serve complementary functions, with their joint application yielding delay reductions that closely approximate the combined potential of both mechanisms, benefits that persist in mixed-traffic settings. The final part addresses real-time AMoD operations under stochastic and evolving demand, resolving the sequential decision-making challenge through an optimization-augmented learning pipeline that couples prediction with decision-making. Numerical experiments show that the framework recovers a substantial share of offline coordination gains when deployed online, offering a scalable pathway toward efficient autonomous urban mobility."
+        },
+        "publications": {
+            "staggeredRouting": {
+                "title": "Staggered Routing in Autonomous Mobility-on-Demand Systems",
+                "authors": "Antonio Coppola, Gerhard Hiermann, Dario Paccagnan, Maximilian Schiffer",
+                "venue": "European Journal of Operational Research, 327(3):875–891, 2025",
+                "abstract": "In autonomous mobility-on-demand systems, effectively managing vehicle flows to mitigate induced congestion and ensure efficient operations is imperative for system performance and positive customer experience. Against this background, we study the potential of staggered routing, i.e., purposely delaying trip departures from a system perspective, in order to reduce congestion and ensure efficient operations while still meeting customer time windows. We formalize the underlying planning problem and show how to efficiently model it as a mixed integer linear program. Moreover, we present a matheuristic that allows us to efficiently solve large-scale real-world instances both in an offline full-information setting and its online rolling horizon counterpart. We conduct a numerical study for Manhattan, New York City, focusing on low- and highly- congested scenarios. Our results show that in low-congestion scenarios, staggering trip departures allows mitigating, on average, 98% of the induced congestion in a full information setting. In a rolling horizon setting, our algorithm allows us to reduce 82% of the induced congestion. In high-congestion scenarios, we observe an average reduction of 60% as the full information bound and an average reduction of 30% in our online setting. Surprisingly, we show that these reductions can be reached by shifting trip departures by a maximum of six minutes in both the low- and high-congestion scenarios."
+            },
+            "partialControllability": {
+                "title": "Partial Controllability of Network Dynamical Systems with Unilateral Inputs",
+                "authors": "Camilla Ancona, Francesco Lo Iudice, Antonio Coppola, Pietro De Lellis, Francesco Garofalo",
+                "venue": "IEEE Control Systems Letters, 6:2252–2257, 2021",
+                "abstract": "Our ability to control network dynamical systems is often hindered by constraints on the number and nature of the available control actions, which make controlling the whole network unfeasible. In this manuscript, we focus on the case where unilateral inputs are exerted on a subset of the network nodes. Leveraging the observation that, different from the case of subsystems, unilateral node reachability and controllability are equivalent, we provide conditions for a given node subset to be unilaterally controllable. The theoretical findings are then employed to develop a computationally efficient heuristic to select the nodes where the unilateral inputs should be injected."
+            }
+        },
+        "workingPapers": {
+            "integratedBalStag": {
+                "title": "Integrated Balanced and Staggered Routing in AMoD Systems",
+                "authors": "Antonio Coppola, Gerhard Hiermann, Dario Paccagnan, Michel Gendreau, Maximilian Schiffer",
+                "venue": "Under review, 2026",
+                "abstract": "Autonomous mobility-on-demand (AMoD) systems — centrally coordinated fleets of self-driving vehicles — offer a promising alternative to traditional ride-hailing by improving traffic flow and reducing operating costs. Centralized control in AMoD systems enables two complementary routing strategies: balanced routing, which distributes traffic across alternative routes to ease congestion, and staggered routing, which delays departures to smooth peak demand over time. In this work, we introduce a unified framework that jointly optimizes both route choices and departure times to minimize system travel times. We formulate the problem as an optimization model and show that our congestion model yields an unbiased estimate of travel times derived from a discretized version of Vickrey’s bottleneck model. To solve large-scale instances, we develop a custom metaheuristic based on a large neighborhood search framework. To assess our method, we conduct a case study on the Manhattan street network using real-world taxi data. In a setting with exclusively centrally controlled AMoD vehicles, our approach reduces total traffic delay by up to 25% and mitigates network congestion by up to 35% compared to selfish routing. We also consider mixed-traffic settings with both AMoD and conventional vehicles, comparing a welfare-oriented operator that minimizes total system travel time with a profit-oriented one that optimizes only the fleet’s travel time. Independent of the operator’s objective, the analysis reveals a win–win outcome: across all control levels, both autonomous and non-autonomous traffic benefit from the implementation of balancing and staggering strategies."
+            },
+            "onlineBalStag": {
+                "title": "Online Balanced and Staggered Routing in AMoD Systems",
+                "authors": "Antonio Coppola, Gerhard Hiermann, Dario Paccagnan, Maximilian Schiffer",
+                "venue": "Under review, 2026",
+                "abstract": "This work explores online decision-making for balanced and staggered routing under dynamic demand. The goal is to design scalable and anticipatory control policies for real-time AMoD operations that can internalize future congestion effects while remaining computationally tractable."
+            }
+        }
+    },
+    "talks": {
+        "title": "Talks & Presentations",
+        "items": {
+            "tsl2026": {
+                "title": "Online Balanced and Staggered Routing in AMoD Systems",
+                "event": "TSL Conference, MIT (accepted)",
+                "year": "Jul 2026"
+            },
+            "jopt2025": {
+                "title": "Integrated Balanced and Staggered Routing in AMoD Systems",
+                "event": "JOPT Conference, Montréal, Canada",
+                "year": "May 2025"
+            },
+            "or2024": {
+                "title": "Integrated Balanced and Staggered Routing in AMoD Systems: Preliminary Results",
+                "event": "OR Conference, Munich, Germany",
+                "year": "Sep 2024"
+            },
+            "jads2023": {
+                "title": "Data-driven Intermodal Autonomous Mobility: Operations and Control",
+                "event": "JADS Symposium, London, UK",
+                "year": "Nov 2023"
+            },
+            "tsl2023": {
+                "title": "Staggered Routing in Autonomous Mobility-on-Demand Systems",
+                "event": "TSL Conference, Chicago, USA",
+                "year": "Jul 2023"
+            },
+            "euro2022": {
+                "title": "Staggered Routing in Autonomous Mobility-on-Demand Systems: Preliminary Results",
+                "event": "EURO Conference, Helsinki, Finland",
+                "year": "Jul 2022"
+            }
+        }
+    },
+    "awards": {
+        "title": "Awarded Scholarships & Fellowships",
+        "items": {
+            "bavariaQuebec": {
+                "name": "Bavaria–Quebec Mobility Program",
+                "year": "2025",
+                "description": "Awarded by the Bavarian Research Alliance (BayFOR)"
+            },
+            "academicTraining": {
+                "name": "Academic Training Program Scholarship",
+                "year": "2024",
+                "description": "Awarded by the TUM School of Management"
+            },
+            "erasmus": {
+                "name": "Erasmus+ Program",
+                "year": "2019",
+                "description": "Awarded by the European Commission"
+            },
+            "unina": {
+                "name": "Research Fellowship in Logistics & Autonomous AGV Control",
+                "year": "2021",
+                "description": "Awarded by University of Naples Federico II"
+            }
+        }
+    },
+    "skills": {
+        "title": "Skills & Toolkit",
+        "categories": {
+            "programming": "Software & Programming",
+            "optimization": "Algorithms & Optimization",
+            "machineLearning": "ML & AI",
+            "tools": "Data & Cloud",
+            "languages": "Languages"
+        },
+        "languages": {
+            "italian": {
+                "name": "Italian",
+                "level": "native"
+            },
+            "english": {
+                "name": "English",
+                "level": "C2"
+            },
+            "german": {
+                "name": "German",
+                "level": "B2"
+            },
+            "french": {
+                "name": "French",
+                "level": "B1"
+            },
+            "portuguese": {
+                "name": "Portuguese",
+                "level": "B1"
+            }
+        }
+    }
+}

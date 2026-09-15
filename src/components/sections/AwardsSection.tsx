@@ -1,51 +1,72 @@
+import { useTranslation } from "react-i18next";
 import SectionWrapper from "@/components/SectionWrapper";
 import SectionTitle from "@/components/SectionTitle";
 import { Award } from "lucide-react";
 
-const scholarships = [
+interface Scholarship {
+  nameKey: string;
+  yearKey: string;
+  descriptionKey: string;
+}
+
+const scholarships: Scholarship[] = [
   {
-    name: "Bavaria–Quebec Student Mobility Program",
-    year: "May 2025",
-    description: "Awarded by the Bavarian Research Alliance (BayFOR)",
+    nameKey: "awards.items.bavariaQuebec.name",
+    yearKey: "awards.items.bavariaQuebec.year",
+    descriptionKey: "awards.items.bavariaQuebec.description",
   },
   {
-    name: "Academic Training Program Scholarship",
-    year: "Nov 2024",
-    description: "Awarded by the TUM School of Management",
+    nameKey: "awards.items.academicTraining.name",
+    yearKey: "awards.items.academicTraining.year",
+    descriptionKey: "awards.items.academicTraining.description",
   },
   {
-    name: "Erasmus+ Scholarship",
-    year: "Sep 2019",
-    description: "Awarded by the European Commission",
+    nameKey: "awards.items.unina.name",
+    yearKey: "awards.items.unina.year",
+    descriptionKey: "awards.items.unina.description",
+  },
+  {
+    nameKey: "awards.items.erasmus.name",
+    yearKey: "awards.items.erasmus.year",
+    descriptionKey: "awards.items.erasmus.description",
   },
 ];
 
-const AwardsSection = () => (
-  <SectionWrapper id="awards">
-    <SectionTitle>Awarded Scholarships</SectionTitle>
+const AwardsSection = () => {
+  const { t } = useTranslation();
 
-    <div className="space-y-4 mt-6">
-      {scholarships.map((award, i) => (
-        <div key={i} className="flex items-start gap-3">
-          <Award size={16} className="text-primary mt-1 flex-shrink-0" />
+  return (
+    <SectionWrapper id="awards">
+      <SectionTitle>{t("awards.title")}</SectionTitle>
 
-          <div>
-            <p className="text-xs font-sans uppercase tracking-wider text-foreground/50">
-              {award.year}
-            </p>
+      <div className="space-y-6 mt-6">
+        {scholarships.map((award, i) => (
+          <div key={i} className="flex flex-col sm:flex-row sm:items-start justify-between gap-1 sm:gap-6">
+            {/* Left Column: Icon & Details */}
+            <div className="flex items-start gap-3 flex-1">
+              <Award size={16} className="text-primary mt-0.5 flex-shrink-0" />
+              <div>
+                <p className="font-sans font-medium text-foreground text-sm leading-snug break-words">
+                  {t(award.nameKey)}
+                </p>
 
-            <p className="font-sans font-medium text-foreground text-sm leading-snug">
-              {award.name}
-            </p>
+                <p className="text-sm text-foreground/70 font-sans mt-0.5">
+                  {t(award.descriptionKey)}
+                </p>
+              </div>
+            </div>
 
-            <p className="text-sm text-foreground/70 font-sans">
-              {award.description}
-            </p>
+            {/* Right Column: Date */}
+            <div className="sm:w-28 sm:text-right flex-shrink-0">
+              <span className="text-xs font-sans uppercase tracking-wider text-foreground/50 font-medium">
+                {t(award.yearKey)}
+              </span>
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
-  </SectionWrapper>
-);
+        ))}
+      </div>
+    </SectionWrapper>
+  );
+};
 
 export default AwardsSection;

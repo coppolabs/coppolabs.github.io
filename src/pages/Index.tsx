@@ -1,3 +1,4 @@
+import "../i18n";
 import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
 import ResearchSection from "@/components/sections/ResearchSection";
@@ -14,10 +15,10 @@ const Index = () => (
     <AboutSection />
     <ExperienceSection />
     <EducationSection />
-    <ResearchSection />
-    <TalksSection />
-    <AwardsSection />
     <SkillsSection />
+    <ResearchSection />
+    <AwardsSection />
+    <TalksSection />
     <Footer />
   </main>
 );

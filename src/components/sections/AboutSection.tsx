@@ -1,40 +1,43 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import SectionWrapper from "@/components/SectionWrapper";
 import SectionTitle from "@/components/SectionTitle";
 import flowVideo from "@/assets/manhattan_flow.mp4";
 
 const AboutSection = () => {
+  const { t } = useTranslation();
+
   const timelineEvents = [
     {
       year: "2014",
-      city: "Naples",
-      institution: "University of Naples Federico II",
-      details: "Industrial engineering foundation",
+      city: t("about.timeline.naples.city"),
+      institution: t("about.timeline.naples.institution"),
+      details: t("about.timeline.naples.details"),
     },
     {
       year: "2019",
-      city: "Braga",
-      institution: "Universidade do Minho",
-      details: "International exchange, Erasmus+",
+      city: t("about.timeline.braga.city"),
+      institution: t("about.timeline.braga.institution"),
+      details: t("about.timeline.braga.details"),
     },
     {
       year: "2021",
-      city: "Munich",
-      institution: "Technical University of Munich",
-      details: "Ph.D. Launch",
+      city: t("about.timeline.munichLaunch.city"),
+      institution: t("about.timeline.munichLaunch.institution"),
+      details: t("about.timeline.munichLaunch.details"),
     },
     {
       year: "2025",
-      city: "Montreal",
-      institution: "Polytechnique Montréal",
-      details: "Transportation optimization research",
+      city: t("about.timeline.montreal.city"),
+      institution: t("about.timeline.montreal.institution"),
+      details: t("about.timeline.montreal.details"),
     },
     {
       year: "2026",
-      city: "Munich",
-      institution: "Technical University of Munich",
-      details: "Ph.D. awarded",
-      current: "true"
+      city: t("about.timeline.munichAwarded.city"),
+      institution: t("about.timeline.munichAwarded.institution"),
+      details: t("about.timeline.munichAwarded.details"),
+      current: true,
     },
   ];
 
@@ -45,7 +48,7 @@ const AboutSection = () => {
 
   return (
     <SectionWrapper id="about" variant="band">
-      <SectionTitle>My Journey as an Engineer & Researcher</SectionTitle>
+      <SectionTitle>{t("about.title")}</SectionTitle>
 
       {/* Lean Line Timeline (Desktop Only) */}
       <div className="-mt-2 mb-14 relative px-4 hidden md:block">
@@ -73,7 +76,7 @@ const AboutSection = () => {
               {/* Text Description Stack */}
               <div className="space-y-1 px-2">
                 <div>
-                  <h5 className={`text-sm font-bold font-sans inline-block ${evt.current ? "text-primary" : "text-slate-800"}`}>
+                  <h5 className={`text-sm font-bold font-sans inline-block ${evt.current ? "text-primary dark:text-foreground/80" : "text-primary-800 dark:text-foreground/60"}`} >
                     {evt.city}
                   </h5>
                   <p className="text-[10px] font-sans font-medium text-slate-400 leading-tight line-clamp-1 max-w-[150px] mx-auto mt-0.5">
@@ -158,8 +161,7 @@ const AboutSection = () => {
         <div className="flex-1 max-w-none">
           <div className="space-y-3 text-foreground/80 font-sans leading-[1.65] text-justify break-words [hyphens:auto]">
             <p>
-              My engineering journey began in Naples, Italy, where I completed my undergraduate studies in Industrial Engineering,
-              and worked on the mathematical control of complex networks alongside{" "}
+              {t("about.p1.part1")}{" "}
               <a
                 href="https://scholar.google.de/citations?hl=it&user=xO0lRJIAAAAJ"
                 target="_blank"
@@ -168,7 +170,7 @@ const AboutSection = () => {
               >
                 Prof. Franco Garofalo
               </a>
-              . Driven by a growing interest in large-scale operational problems, I moved to Germany to pursue a Ph.D. at the Technical University of Munich with{" "}
+              {t("about.p1.part2")}{" "}
               <a
                 href="https://scholar.google.de/citations?user=umGuS18AAAAJ&hl=it&oi=ao"
                 target="_blank"
@@ -177,10 +179,10 @@ const AboutSection = () => {
               >
                 Prof. Maximilian Schiffer
               </a>
-              , where I specialized in scalable optimization algorithms for future mobility systems.
+              {t("about.p1.part3")}
             </p>
             <p>
-              Over the years, I tested these methods on real operational problems and shared the results with peers in the field. I spent a period as a visiting researcher at Polytechnique Montréal with{" "}
+              {t("about.p2.part1")}{" "}
               <a
                 href="https://scholar.google.de/citations?hl=it&user=CilK624AAAAJ"
                 target="_blank"
@@ -189,10 +191,10 @@ const AboutSection = () => {
               >
                 Prof. Michel Gendreau
               </a>
-              , focused on deepening my knowledge of large-scale transportation optimization.
+              {t("about.p2.part2")}
             </p>
             <p>
-              I completed my Ph.D. in 2026. Alongside this, I taught courses, supervised Master's theses, and worked directly with industry partners, deploying my solutions in real-world mobility systems.
+              {t("about.p3")}
             </p>
           </div>
         </div>
@@ -213,10 +215,10 @@ const AboutSection = () => {
 
                 <div className="absolute bottom-2 right-2 px-2 py-1.5 bg-white rounded-lg border border-border/80 shadow-sm z-10 flex flex-col gap-0.5 font-sans">
                   {[
-                    { color: "bg-orange-400", label: "passenger" },
-                    { color: "bg-blue-600", label: "pickup" },
-                    { color: "bg-green-600", label: "rebalancing" },
-                    { color: "bg-red-500", label: "idle" },
+                    { color: "bg-orange-400", label: t("about.videoLegend.passenger") },
+                    { color: "bg-blue-600", label: t("about.videoLegend.pickup") },
+                    { color: "bg-green-600", label: t("about.videoLegend.rebalancing") },
+                    { color: "bg-red-500", label: t("about.videoLegend.idle") },
                   ].map((item, idx) => (
                     <div key={idx} className="flex items-center gap-1.5 leading-none">
                       <span className={`w-1.5 h-1.5 rounded-full ${item.color} flex-shrink-0`} />
@@ -230,7 +232,7 @@ const AboutSection = () => {
 
               <div className="py-2 mt-1">
                 <p className="text-[9px] uppercase tracking-[0.15em] text-center text-foreground/40 font-sans font-bold">
-                  Manhattan Flow Simulation
+                  {t("about.videoCaption")}
                 </p>
               </div>
             </div>
@@ -240,14 +242,14 @@ const AboutSection = () => {
 
       <div className="mt-5 p-4 rounded-lg bg-background border border-border text-center">
         <p className="text-xs font-sans uppercase tracking-wider text-foreground/50 mb-1">
-          Fun fact
+          {t("about.funFact.label")}
         </p>
         <div className="text-sm text-foreground/70 font-sans italic flex flex-col gap-1 items-center">
           <span>
-            I am the frontman of a rock band, where I explore a more creative and expressive side of my personality.
+            {t("about.funFact.p1")}
           </span>
           <span>
-            I truly enjoy the process of writing music, performing and connecting with audiences.
+            {t("about.funFact.p2")}
           </span>
         </div>
       </div>

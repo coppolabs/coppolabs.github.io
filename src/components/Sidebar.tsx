@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { Menu, X, Mail, Linkedin, Github, GraduationCap, Sun, Moon } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const links = [
   { label: "Email", href: "mailto:antonio.coppola364@gmail.com", icon: <Mail size={18} /> },
@@ -10,19 +11,19 @@ const links = [
 ];
 
 const navItems = [
-  { label: "Home", href: "/#hero" },
-  { label: "About", href: "/#about" },
-  { label: "Experience", href: "/#experience" },
-  { label: "Education", href: "/#education" },
-  { label: "Research", href: "/#research" },
-  { label: "Talks", href: "/#talks" },
-  { label: "Awards", href: "/#awards" },
-  { label: "Skills", href: "/#skills" },
+  { key: "about", href: "/#about" },
+  { key: "experience", href: "/#experience" },
+  { key: "education", href: "/#education" },
+  { key: "skills", href: "/#skills" },
+  { key: "research", href: "/#research" },
+  { key: "awards", href: "/#awards" },
+  { key: "talks", href: "/#talks" },
 ];
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -53,83 +54,96 @@ const Navbar = () => {
     <>
       {/* Top bar */}
       <header className="fixed top-0 left-0 w-full z-50 bg-surface border-b border-border">
-        <div className="max-w-5xl mx-auto flex items-center justify-between px-6 py-4">
+        <div className="max-w-5xl mx-auto flex items-center px-6 py-4">
 
-          {/* Left: Name & Mobile Socials */}
-          <div className="flex items-center gap-4">
-            <h2 className="text-xl font-serif font-bold tracking-tight text-foreground">
-              Antonio Coppola
-            </h2>
+          {/* Left: Name (Clickable Home link) */}
+          <div className="shrink-0">
+            <a href="/#hero" className="inline-block hover:opacity-80 transition-opacity">
+              <h2 className="text-xl font-serif font-bold tracking-tight text-foreground whitespace-nowrap leading-none">
+                Antonio Coppola
+              </h2>
+            </a>
+          </div>
 
-            <div className="flex lg:hidden items-center gap-4 ml-2">
+          {/* Center: Desktop Nav Links (Equal spacing distribution) */}
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-5 mx-auto px-8">
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors whitespace-nowrap"
+              >
+                {t(`nav.${item.key}`)}
+              </a>
+            ))}
+          </nav>
+
+          {/* Right: Controls (Socials, Theme, Language) */}
+          <div className="hidden lg:flex items-center gap-3 shrink-0">
+            {/* Social Icons */}
+            <div className="flex items-center gap-1">
+              {links.map((link) => (
+                <div key={link.label} className="relative group flex items-center justify-center">
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-foreground/60 hover:text-primary transition-colors p-1.5 rounded hover:bg-primary/5 flex items-center justify-center"
+                  >
+                    {link.icon}
+                  </a>
+                  <div className="absolute top-full mt-1.5 px-2 py-1 bg-foreground text-background text-[10px] font-medium rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50 shadow-sm">
+                    {link.label}
+                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 border-4 border-transparent border-b-foreground"></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              aria-label="Toggle theme"
+              className="p-1.5 rounded text-foreground/60 hover:text-primary hover:bg-primary/5 transition-colors flex items-center justify-center"
+            >
+              {isDark ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
+
+            {/* Language Switcher */}
+            <div className="pl-2 border-l border-border flex items-center">
+              <LanguageSwitcher />
+            </div>
+          </div>
+
+          {/* Mobile Actions */}
+          <div className="flex lg:hidden items-center gap-2 ml-auto">
+            <div className="flex items-center gap-1.5 mr-1">
               {links.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-foreground/60 hover:text-primary transition-colors"
+                  className="text-foreground/60 hover:text-primary transition-colors p-1 flex items-center"
                 >
                   {link.icon}
                 </a>
               ))}
             </div>
-          </div>
 
-          {/* Desktop Nav (Hidden on Mobile) */}
-          <nav className="hidden lg:flex items-center gap-6">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="text-sm text-foreground/80 hover:text-primary transition-colors"
-              >
-                {item.label}
-              </a>
-            ))}
-          </nav>
-
-          {/* Desktop Socials & Theme Toggle (Hidden on Mobile) */}
-          <div className="hidden lg:flex items-center gap-3">
-            {links.map((link) => (
-              <div key={link.label} className="relative group flex justify-center">
-                <a
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-foreground/60 hover:text-primary transition-colors p-1.5 rounded hover:bg-primary/5 flex items-center justify-center"
-                >
-                  {link.icon}
-                </a>
-                <div className="absolute top-full mt-1.5 px-2 py-1 bg-foreground text-background text-[10px] font-medium rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50 shadow-sm">
-                  {link.label}
-                  <div className="absolute bottom-full left-1/2 -translate-x-1/2 border-4 border-transparent border-b-foreground"></div>
-                </div>
-              </div>
-            ))}
+            <LanguageSwitcher />
 
             <button
               onClick={toggleTheme}
               aria-label="Toggle theme"
-              className="ml-2 p-1.5 rounded text-foreground/60 hover:text-primary hover:bg-primary/5 transition-colors flex items-center justify-center"
-            >
-              {isDark ? <Sun size={18} /> : <Moon size={18} />}
-            </button>
-          </div>
-
-          {/* Mobile Actions: Theme Toggle + Menu button */}
-          <div className="flex lg:hidden items-center gap-2 ml-auto">
-            <button
-              onClick={toggleTheme}
-              aria-label="Toggle theme"
-              className="p-2 rounded-md text-foreground/60 hover:text-primary transition-colors"
+              className="p-2 rounded-md text-foreground/60 hover:text-primary transition-colors flex items-center justify-center"
             >
               {isDark ? <Sun size={20} /> : <Moon size={20} />}
             </button>
 
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="p-2 rounded-md text-foreground"
+              className="p-2 rounded-md text-foreground flex items-center justify-center"
             >
               {mobileOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
@@ -137,9 +151,9 @@ const Navbar = () => {
         </div>
       </header>
 
-      {/* Mobile dropdown - Two Column Layout */}
+      {/* Mobile dropdown */}
       {mobileOpen && (
-        <div className="fixed top-[60px] left-0 w-full bg-surface border-b border-border z-40 px-6 py-3 flex flex-col lg:hidden shadow-lg">
+        <div className="fixed top-[60px] left-0 w-full bg-surface border-b border-border z-40 px-6 py-4 flex flex-col lg:hidden shadow-lg">
           <nav className="grid grid-cols-2 gap-x-4 gap-y-1">
             {navItems.map((item) => (
               <a
@@ -148,7 +162,7 @@ const Navbar = () => {
                 onClick={() => setMobileOpen(false)}
                 className="text-sm text-foreground/80 hover:text-primary py-2 transition-colors border-b border-border/50 last:border-0"
               >
-                {item.label}
+                {t(`nav.${item.key}`)}
               </a>
             ))}
           </nav>
