@@ -176,7 +176,7 @@ const ResearchSection = () => {
         ))}
       </div>
 
-      <div className="md:hidden -mt-10 mb-6">
+      <div className="sm:hidden md:hidden -mt-10 mb-6">
         <div className="overflow-hidden rounded-xl border border-primary/10 shadow-sm bg-muted/20 p-1">
           <div className="group relative aspect-[16/9] overflow-hidden rounded-lg grayscale transition-all duration-500 hover:grayscale-0 active:grayscale-0">
             <video
