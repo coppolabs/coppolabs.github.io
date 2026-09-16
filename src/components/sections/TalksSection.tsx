@@ -64,8 +64,15 @@ const TalksSection = () => {
               key={i}
               className="flex flex-col sm:flex-row sm:items-start justify-between gap-1 sm:gap-6"
             >
+              {/* Date */}
+              <div className="sm:order-2 sm:w-28 sm:text-right flex-shrink-0">
+                <span className="text-xs font-sans uppercase tracking-wider text-foreground/50 font-medium">
+                  {t(talk.yearKey)}
+                </span>
+              </div>
+
               {/* Left Column: Icon & Details */}
-              <div className="flex items-start gap-3 flex-1">
+              <div className="sm:order-1 flex items-start gap-3 flex-1">
                 <Icon size={16} className="text-primary mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="font-sans font-medium text-foreground text-sm leading-snug break-words">
@@ -76,13 +83,6 @@ const TalksSection = () => {
                     {t(talk.eventKey)}
                   </p>
                 </div>
-              </div>
-
-              {/* Right Column: Date */}
-              <div className="sm:w-28 sm:text-right flex-shrink-0">
-                <span className="text-xs font-sans uppercase tracking-wider text-foreground/50 font-medium">
-                  {t(talk.yearKey)}
-                </span>
               </div>
             </div>
           );
